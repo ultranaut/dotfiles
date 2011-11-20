@@ -1,9 +1,9 @@
 # dotfiles
 Word.
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ## Installation
+
 Install to `~/.dotfiles` and create symlinks:
 
     cd ~
@@ -21,7 +21,6 @@ The `git-submodule init` and `git-submodule update` can be combined:
 
     git submodule update --init
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ## Updating/upgrading submodules
 Seems like more work than it's necessarily worth to install pathogen intself
