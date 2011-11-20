@@ -8,10 +8,10 @@ Install to `~/.dotfiles` and create symlinks:
 
     cd ~
     git clone git://github.com/ultranaut/dotfiles.git ~/.dotfiles
-    ln -s ~/.vim ~/.dotfiles/_vim
-    ln -s ~/.vimrc ~/.dotfiles/_vimrc
-    ln -s ~/.zshrc ~/.dotfiles/_zshrc
-    ln -s ~/.oh-my-zsh ~/.dotfiles/_oh-my-zsh
+    ln -s ~/.dotfiles/_vim .vim
+    ln -s ~/.dotfiles/_vimrc .vimrc
+    ln -s ~/.dotfiles/_oh-my-zsh .oh-my-zsh
+    ln -s ~/.dotfiles/_zshrc .zshrc
 
 Switch to working directory and fetch submodules:
 
@@ -23,9 +23,15 @@ The `git-submodule init` and `git-submodule update` can be combined:
 
     git submodule update --init
 
+Change login shell to zsh:
+
+    chsh -s /bin/zsh
+
+and enter password when prompted.
 
 ## Updating/upgrading submodules
-Seems like more work than it's necessarily worth to install pathogen intself
+
+Seems like more work than it's necessarily worth to install pathogen itself
 as a submodule, so you need to "manually" fetch newer versions:
    
     curl -so ~/.dotfiles/_vim/autoload/pathogen.vim \
