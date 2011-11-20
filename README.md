@@ -10,6 +10,8 @@ Install to `~/.dotfiles` and create symlinks:
     git clone git://github.com/ultranaut/dotfiles.git ~/.dotfiles
     ln -s ~/.vim ~/.dotfiles/_vim
     ln -s ~/.vimrc ~/.dotfiles/_vimrc
+    ln -s ~/.zshrc ~/.dotfiles/_zshrc
+    ln -s ~/.oh-my-zsh ~/.dotfiles/_oh-my-zsh
 
 Switch to working directory and fetch submodules:
 
