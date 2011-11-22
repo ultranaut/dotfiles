@@ -75,8 +75,13 @@ vnoremap <tab> %
 " hopefully I never need to insert consecutive j's real fast
 inoremap jj <ESC>  
 
-" forgot to get permission first?
+" Act in haste, repent at leisure
 cmap w!! w !sudo tee % >/dev/null
+
+" Shortcut to toggle `set list`
+nmap <leader>l :set list!<CR>
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,nbsp:%,eol:¬
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -103,7 +108,7 @@ if &t_Co >= 256 || has("gui_running")
 	" solarized options 
 	set background=dark
 	let g:solarized_termcolors=256 
-	let g:solarized_visibility="high" 
+	let g:solarized_visibility="normal" 
 	let g:solarized_contrast="high" 
 	colorscheme solarized 
 endif
