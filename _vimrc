@@ -92,6 +92,10 @@ set listchars=tab:▸\ ,nbsp:%,eol:¬
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Swap default Command-T file open actions
+let g:CommandTAcceptSelectionMap = '<C-t>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
