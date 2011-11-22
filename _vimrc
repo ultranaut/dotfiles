@@ -24,7 +24,7 @@ set history=1000     " lots of history
 set hlsearch         " highlight search terms
 set ignorecase       " ignore case when searching (but see smartcase)
 set incsearch        " show search matches as you type
-set statusline=Last\ modified:\ \%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}
+set linebreak
 set modelines=0      " disable modelines
 set nobackup         " turn off auto-backup
 set noerrorbells     " no bell, thank you.
@@ -37,11 +37,13 @@ set showmatch        " set show matching parenthesis
 set smartcase        " ignore case if search pattern is all lowercase, case-sensitive otherwise
 set smarttab         " insert tabs on the start of a line according to shiftwidth, not tabstop
 set softtabstop=2    " 
+set statusline=Last\ modified:\ \%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}
 set tabstop=2        " tabs are 2 spaces wide
 set title            " change the terminal's title
 set undolevels=1000  " lots of undo
 set visualbell       " visual cue instead of bell
 set wildignore=*.swp,*.bak
+set wrap
 
 " change the mapleader from \ to ,
 let mapleader=","
