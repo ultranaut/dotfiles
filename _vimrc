@@ -17,31 +17,32 @@ set nocompatible
 " Editor behavior
 set autoindent
 set backspace=indent,eol,start
-set copyindent       " copy the previous indentation on autoindenting
-set gdefault         " default to global substitutions
-set hidden           " hide rather than close buffer on opening new file
-set history=1000     " lots of history
-set hlsearch         " highlight search terms
-set ignorecase       " ignore case when searching (but see smartcase)
-set incsearch        " show search matches as you type
+set clipboard=unnamed
+set copyindent         " copy the previous indentation on autoindenting
+set gdefault           " default to global substitutions
+set hidden             " hide rather than close buffer on opening new file
+set history=1000       " lots of history
+set hlsearch           " highlight search terms
+set ignorecase         " ignore case when searching (but see smartcase)
+set incsearch          " show search matches as you type
 set linebreak
-set modelines=0      " disable modelines
-set nobackup         " turn off auto-backup
-set noerrorbells     " no bell, thank you.
-set number           " always show line numbers
-set relativenumber   " show relative line numbers, ie distance from current line
-set ruler            " show the cursor position all the time
-set shiftround       " use multiple of shiftwidth when indenting with '<' and '>'
-set shiftwidth=2     " number of spaces to use for autoindent
-set showmatch        " set show matching parenthesis
-set smartcase        " ignore case if search pattern is all lowercase, case-sensitive otherwise
-set smarttab         " insert tabs on the start of a line according to shiftwidth, not tabstop
-set softtabstop=2    " 
+set modelines=0        " disable modelines
+set nobackup           " turn off auto-backup
+set noerrorbells       " no bell, thank you.
+set number             " always show line numbers
+set relativenumber     " show relative line numbers, ie distance from current line
+set ruler              " show the cursor position all the time
+set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
+set shiftwidth=2       " number of spaces to use for autoindent
+set showmatch          " set show matching parenthesis
+set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
+set softtabstop=2      " 
 set statusline=Last\ modified:\ \%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}
-set tabstop=2        " tabs are 2 spaces wide
-set title            " change the terminal's title
-set undolevels=1000  " lots of undo
-set visualbell       " visual cue instead of bell
+set tabstop=2          " tabs are 2 spaces wide
+set title              " change the terminal's title
+set undolevels=1000    " lots of undo
+set visualbell         " visual cue instead of bell
 set wildignore=*.swp,*.bak
 set wrap
 
