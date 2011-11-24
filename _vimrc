@@ -84,8 +84,6 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-" hopefully I never need to insert consecutive j's real fast
-inoremap jj <ESC>  
 " quick save
 nnoremap <F2> :w<cr>
 inoremap <F2> <C-o>:w<cr>
