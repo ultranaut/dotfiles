@@ -13,5 +13,6 @@ Thumbs.db
 # vim generated files #
 #######################
 Session.vim
+.netrwhist
 *.swp
 *~
