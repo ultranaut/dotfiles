@@ -1,0 +1,16 @@
+*.bak
+
+# Sublime settings #
+########################
+sftp-settings.json
+
+# OS files #
+############
+.DS_Store*
+Icon?
+Thumbs.db
+
+# vim generated files #
+#######################
+*.swp
+*~

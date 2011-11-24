@@ -13,7 +13,9 @@ Install to `~/.dotfiles` and create symlinks:
     ln -s ~/.dotfiles/_oh-my-zsh .oh-my-zsh
     ln -s ~/.dotfiles/_zshrc .zshrc
     ln -s ~/.dotfiles/bin bin
-
+    ln -s ~/.dotfiles/_gitconfig .gitconfig
+    ln -s ~/.dotfiles/_gitignore_global .gitignore_global
+    
 Switch to working directory and fetch submodules:
 
     cd ~/.dotfiles
