@@ -1,11 +1,20 @@
 "
 " Personal preferences .vimrc file
-" John Shearer <john@ultranaut.com>
+" john shearer <john@ultranaut.com>
 "
 " Some sources for this mishmash:
 "   http://nvie.com/posts/how-i-boosted-my-vim/
 "   https://raw.github.com/nvie/vimrc/master/vimrc
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+"   http://stackoverflow.com/q/96044/452233
+"
+
+let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'nerdtree')
+
+let g:netrw_liststyle=3    " Use tree-mode as default view
+let g:netrw_browse_split=4 " Open file in previous buffer
+let g:netrw_preview=1      " preview window shown in vertical split
 
 filetype off
 call pathogen#runtime_append_all_bundles()
@@ -14,7 +23,7 @@ filetype plugin indent on
 
 set nocompatible
 
-" Editor behavior
+"   Editor behavior
 set autoindent
 set backspace=indent,eol,start
 set clipboard=unnamed
@@ -96,6 +105,20 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " Swap default Command-T file open actions
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+" create a 'workspace' -- :mksession to create, <F3> to restore
+nmap <F3> <ESC>:call LoadSession()<CR>
+let s:sessionloaded = 0
+function LoadSession()
+  source Session.vim
+  let s:sessionloaded = 1
+endfunction
+function SaveSession()
+  if s:sessionloaded == 1
+    mksession!
+  end
+endfunction
+autocmd VimLeave * call SaveSession()
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
