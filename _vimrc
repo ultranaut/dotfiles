@@ -7,10 +7,6 @@
 "   https://raw.github.com/nvie/vimrc/master/vimrc
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
-"
-
-let g:pathogen_disabled = []
-call add(g:pathogen_disabled, 'nerdtree')
 
 let g:netrw_liststyle=3    " Use tree-mode as default view
 let g:netrw_browse_split=4 " Open file in previous buffer
