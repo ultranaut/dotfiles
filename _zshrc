@@ -29,7 +29,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=$PATH:~/bin:/usr/local/bin:/usr/local/mysql/bin; export PATH
+PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH; export PATH
 alias ll='ls -l'
 alias l='ls -al'
 
