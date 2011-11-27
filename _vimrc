@@ -8,10 +8,6 @@
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
 
-let g:netrw_liststyle=3    " Use tree-mode as default view
-let g:netrw_browse_split=4 " Open file in previous buffer
-let g:netrw_preview=1      " preview window shown in vertical split
-
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -53,6 +49,11 @@ set wrap
 
 " change the mapleader from \ to ,
 let mapleader=","
+
+" netrw settings to make it more nerdtree-ish
+let g:netrw_liststyle=3     " Use tree-mode as default view
+let g:netrw_browse_split=4  " Open file in previous buffer
+let g:netrw_preview=1       " preview window shown in vertical split
 
 " split windows conveniences
 noremap <leader>w <C-w>v<C-w>l
