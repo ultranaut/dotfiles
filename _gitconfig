@@ -5,7 +5,8 @@
 	unstage = reset HEAD --
 	discard = checkout --
 	br = branch
-	logv = log --name-status
+	lop = log --oneline -20
+	lov = log --name-status
 [color]
 	status = auto
 	branch = auto
