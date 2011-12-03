@@ -20,12 +20,14 @@ set autoindent
 set backspace=indent,eol,start
 set clipboard=unnamed
 set copyindent         " copy the previous indentation on autoindenting
+set cursorline         " highlight line cursor is on
 set gdefault           " default to global substitutions
 set hidden             " hide rather than close buffer on opening new file
 set history=1000       " lots of history
 set hlsearch           " highlight search terms
 set ignorecase         " ignore case when searching (but see smartcase)
 set incsearch          " show search matches as you type
+set laststatus=2       " display status line
 set linebreak
 set modelines=0        " disable modelines
 set nobackup           " turn off auto-backup
@@ -38,8 +40,8 @@ set shiftwidth=2       " number of spaces to use for autoindent
 set showmatch          " set show matching parenthesis
 set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
 set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
-set softtabstop=2      " 
-set statusline=Last\ modified:\ \%{strftime(\"\%c\",getftime(expand(\"\%\%\")))}
+set softtabstop=2      "
+set statusline=%<\"%f\"\ %m%h%r\ [\%{strftime(\"\%m.\%d.\%Y\ \%H\:\%S\",getftime(expand(\"\%\%\")))}]%=%-14.(%l,%c%V%)\ %p%%\ [%L]
 set tabstop=2          " tabs are 2 spaces wide
 set title              " change the terminal's title
 set undolevels=1000    " lots of undo
@@ -140,7 +142,7 @@ if &t_Co >= 256 || has("gui_running")
 	let g:solarized_contrast="high" 
 	colorscheme solarized 
 endif
-	
+
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -149,6 +151,9 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" Abbreviations
+iab rrc http://www.rachaelray.com/
 iab lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam lacus ligula accumsan id.
 iab llorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula, accumsan id imperdiet rhoncus, dapibus vitae arcu. Nulla non quam erat, luctus consequat nisi.
 iab lllorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula, accumsan id imperdiet rhoncus, dapibus vitae arcu. Nulla non quam erat, luctus consequat nisi. Integer hendrerit lacus sagittis erat fermentum tincidunt. Cras vel dui neque. In sagittis commodo luctus. Mauris non metus dolor, ut suscipit dui. Aliquam mauris lacus, laoreet et consequat quis, bibendum id ipsum. Donec gravida, diam id imperdiet cursus, nunc nisl bibendum sapien, eget tempor neque elit in tortor.
+
