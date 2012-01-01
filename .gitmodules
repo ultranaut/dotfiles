@@ -28,3 +28,6 @@
 [submodule "_vim/bundle/align"]
 	path = _vim/bundle/align
 	url = https://github.com/tsaleh/vim-align.git
+[submodule "_vim/bundle/ragtag"]
+	path = _vim/bundle/ragtag
+	url = https://github.com/tpope/vim-ragtag.git
