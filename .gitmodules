@@ -31,3 +31,6 @@
 [submodule "_vim/bundle/ragtag"]
 	path = _vim/bundle/ragtag
 	url = https://github.com/tpope/vim-ragtag.git
+[submodule "_vim/bundle/snipmate"]
+	path = _vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
