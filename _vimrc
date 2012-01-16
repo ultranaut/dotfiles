@@ -35,7 +35,6 @@ set modelines=0        " disable modelines
 set nobackup           " turn off auto-backup
 set noerrorbells       " no bell, thank you.
 set number             " always show line numbers
-"set relativenumber    " show relative line numbers, ie distance from current line
 set ruler              " show the cursor position all the time
 set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
 set shiftwidth=2       " number of spaces to use for autoindent
@@ -54,6 +53,9 @@ set wrap
 
 " change the mapleader from \ to ,
 let mapleader=","
+
+" quick escape in insert mode, keep cursor in same spot
+inoremap jk <Esc>l
 
 " netrw settings to make it more nerdtree-ish
 let g:netrw_liststyle=3     " Use tree-mode as default view
