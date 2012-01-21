@@ -59,8 +59,13 @@ inoremap jk <Esc>l
 
 " netrw settings to make it more nerdtree-ish
 let g:netrw_liststyle=3     " Use tree-mode as default view
-let g:netrw_browse_split=4  " Open file in previous buffer
 let g:netrw_preview=1       " preview window shown in vertical split
+let g:netrw_browse_split=3  " Open file in previous buffer
+                            "   =0: re-using the same window
+                            "   =1: horizontally splitting the window first 
+                            "   =2: vertically   splitting the window first 
+                            "   =3: open file in new tab
+                            "   =4: act like 'P' (ie. open previous window)
 
 " split windows conveniences
 noremap <leader>w <C-w>v<C-w>l
