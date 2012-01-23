@@ -1,9 +1,9 @@
 *.bak
 tags
 
-# Sublime settings #
+# Sublime files #
 ########################
-sftp-settings.json
+sftp-*.json
 
 # OS files #
 ############
