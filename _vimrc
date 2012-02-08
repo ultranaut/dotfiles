@@ -164,6 +164,37 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" Set swap, backup and views directories
+" Put them in $HOMEDIR to avoid clutter in working files
+" http://spf13.com/post/perfect-vimrc-vim-config-file
+function! InitializeDirectories()
+  let separator = "."
+  let parent = $HOME
+  let prefix = '.vim'
+  let dir_list = {
+              \ 'backup': 'backupdir',
+              \ 'views': 'viewdir',
+              \ 'swap': 'directory' }
+
+  for [dirname, settingname] in items(dir_list)
+      let directory = parent . '/' . prefix . dirname . "/"
+      if exists("*mkdir")
+          if !isdirectory(directory)
+              call mkdir(directory)
+          endif
+      endif
+      if !isdirectory(directory)
+          echo "Warning: Unable to create backup directory: " . directory
+          echo "Try: mkdir -p " . directory
+      else
+          let directory = substitute(directory, " ", "\\\\ ", "")
+          exec "set " . settingname . "=" . directory
+      endif
+  endfor
+endfunction
+call InitializeDirectories()
+
+
 " Abbreviations
 iab rrc http://www.rachaelray.com/
 iab lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam lacus ligula accumsan id.
