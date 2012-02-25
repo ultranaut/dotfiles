@@ -39,8 +39,6 @@ alias rr2='ssh jshearer@www2.rachaelray.com'
 alias db1='ssh jshearer@db1.rachaelray.com'
 
 
-
-
 # autojump
 # Copyright Joel Schaerer 2008, 2009
 # This file is part of autojump
