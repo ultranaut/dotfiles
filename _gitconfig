@@ -7,6 +7,10 @@
 	lp = log --oneline -20
 	lv = log --name-status
 	c = commit
+
+	; via http://oli.jp/2012/git-powerup/
+	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [color]
 	status = auto
 	branch = auto
