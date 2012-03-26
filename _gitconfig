@@ -3,7 +3,10 @@
 	co = checkout
 	b = branch
 	c = commit
-
+	
+	cleanup = ! git fsck && git prune && git gc
+	realclean = ! git fsck && git prune && git gc --aggressive
+	
 	; via http://oli.jp/2012/git-powerup/
 	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20
 	ll = log --stat --abbrev-commit
