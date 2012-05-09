@@ -33,7 +33,10 @@ PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH; export PATH
 alias ll='ls -l'
 alias l='ls -al'
 
-alias aa2='ssh admin@www2.rachaelray.com; cd /var/www/rachaelray/scripts'
+alias aa1='ssh admin@www1.rachaelray.com'
+alias aa2='ssh admin@www2.rachaelray.com'
+alias adb='ssh admin@db1.rachaelray.com'
+
 alias rr1='ssh jshearer@www1.rachaelray.com'
 alias rr2='ssh jshearer@www2.rachaelray.com'
 alias db1='ssh jshearer@db1.rachaelray.com'
