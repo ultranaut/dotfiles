@@ -16,19 +16,14 @@ filetype plugin indent on
 set nocompatible
 
 "   Editor behavior
-set autoindent
 set backspace=indent,eol,start
 set clipboard=unnamed
-set copyindent         " copy the previous indentation on autoindenting
 set cursorline         " highlight line cursor is on
 set foldcolumn=4       " foldcolumn width
 set foldmethod=manual  " set fold method
 set gdefault           " default to global substitutions
 set hidden             " hide rather than close buffer on opening new file
 set history=1000       " lots of history
-set hlsearch           " highlight search terms
-set ignorecase         " ignore case when searching (but see smartcase)
-set incsearch          " show search matches as you type
 set laststatus=2       " display status line
 set linebreak
 set modelines=0        " disable modelines
@@ -36,20 +31,30 @@ set nobackup           " turn off auto-backup
 set noerrorbells       " no bell, thank you.
 set number             " always show line numbers
 set ruler              " show the cursor position all the time
-set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
-set shiftwidth=2       " number of spaces to use for autoindent
 set showmatch          " set show matching parenthesis
-set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
-set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
-set softtabstop=2      "
 set statusline=%<\"%f\"\ %m%h%r\ [\%{strftime(\"\%m.\%d.\%Y\ \%H\:\%S\",getftime(expand(\"\%\%\")))}]%=%-14.(%l,%c%V%)\ %p%%\ [%L]
 set switchbuf+=usetab,newtab
-set tabstop=2          " tabs are 2 spaces wide
 set title              " change the terminal's title
 set undolevels=1000    " lots of undo
 set visualbell         " visual cue instead of bell
 set wildignore=*.swp,*.bak,*.jpg,*.gif,*.png,*.ico
-set wrap
+set wrap               " enable soft-wrapping
+
+" search
+set hlsearch           " highlight search terms
+set ignorecase         " ignore case when searching (but see smartcase)
+set incsearch          " show search matches as you type
+set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
+
+" whitespace and indentation
+set autoindent
+set copyindent         " copy the previous indentation on autoindenting
+set expandtab          " spaces, not tabs
+set tabstop=2          " tab characters are 2 spaces wide
+set softtabstop=2      " 
+set shiftwidth=2       " number of spaces to use for indentation in normal mode
+set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
+set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
 
 " change the mapleader from \ to ,
 let mapleader=","
@@ -90,12 +95,15 @@ nnoremap k gk
 " some better search settings
 nnoremap / /\v
 vnoremap / /\v
+
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
 " search directory recursively for word under cursor
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
+" search and replace visual selection
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 " quick save
 nnoremap <F2> :w<cr>
