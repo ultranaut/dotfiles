@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
 PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH; export PATH
 alias ll='ls -l'
 alias l='ls -al'
+alias ping='ping -c 4'
 
 alias aa1='ssh admin@www1.rachaelray.com'
 alias aa2='ssh admin@www2.rachaelray.com'
