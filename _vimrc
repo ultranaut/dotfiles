@@ -173,6 +173,11 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+" visual indicator at column 72
+if exists('+colorcolumn')
+  set colorcolumn=72,80
+endif
+
 " highlight trailing whitespace except when typing in insert mode
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
