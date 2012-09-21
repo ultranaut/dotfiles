@@ -29,7 +29,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH; export PATH
+PATH=/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH; export PATH
 alias ll='ls -l'
 alias l='ls -al'
 alias ping='ping -c 4'
@@ -42,6 +42,7 @@ alias rr1='ssh jshearer@www1.rachaelray.com'
 alias rr2='ssh jshearer@www2.rachaelray.com'
 alias db1='ssh jshearer@db1.rachaelray.com'
 
+alias gi='git'
 
 # autojump
 # Copyright Joel Schaerer 2008, 2009
