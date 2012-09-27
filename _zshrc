@@ -42,6 +42,8 @@ alias rr1='ssh jshearer@www1.rachaelray.com'
 alias rr2='ssh jshearer@www2.rachaelray.com'
 alias db1='ssh jshearer@db1.rachaelray.com'
 
+alias ult='ssh ultranaut@ve.5z7vqzxn.vesrv.com'
+
 alias gi='git'
 
 # autojump
