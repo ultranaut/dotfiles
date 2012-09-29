@@ -12,10 +12,11 @@ Install to `~/.dotfiles` and create symlinks:
     ln -s ~/.dotfiles/_vimrc .vimrc
     ln -s ~/.dotfiles/_oh-my-zsh .oh-my-zsh
     ln -s ~/.dotfiles/_zshrc .zshrc
+    ln -s ~/.dotfiles/_jshintrc .jshintrc
     ln -s ~/.dotfiles/bin bin
     ln -s ~/.dotfiles/_gitconfig .gitconfig
     ln -s ~/.dotfiles/_gitignore_global .gitignore_global
-    
+
 Switch to working directory and fetch submodules:
 
     cd ~/.dotfiles
@@ -36,9 +37,9 @@ and enter password when prompted.
 
 Seems like more work than it's necessarily worth to install pathogen itself
 as a submodule, so you need to "manually" fetch newer versions:
-   
+
     curl -so ~/.dotfiles/_vim/autoload/pathogen.vim \
-        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim 
+        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 
 To add a plugin to the bundle directory:
 
