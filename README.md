@@ -35,12 +35,6 @@ and enter password when prompted.
 
 ## Updating/upgrading submodules
 
-Seems like more work than it's necessarily worth to install pathogen itself
-as a submodule, so you need to "manually" fetch newer versions:
-
-    curl -so ~/.dotfiles/_vim/autoload/pathogen.vim \
-        https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-
 To add a plugin to the bundle directory:
 
     cd ~/.dotfiles

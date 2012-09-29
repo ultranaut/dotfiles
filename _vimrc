@@ -8,6 +8,8 @@
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
 
+" load pathogen from bundle directory
+runtime bundle/pathogen/autoload/pathogen.vim
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -51,7 +53,7 @@ set autoindent
 set copyindent         " copy the previous indentation on autoindenting
 set expandtab          " spaces, not tabs
 set tabstop=2          " tab characters are 2 spaces wide
-set softtabstop=2      " 
+set softtabstop=2      "
 set shiftwidth=2       " number of spaces to use for indentation in normal mode
 set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
 set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
@@ -67,8 +69,8 @@ let g:netrw_liststyle=3     " Use tree-mode as default view
 let g:netrw_preview=1       " preview window shown in vertical split
 let g:netrw_browse_split=3  " Open file in previous buffer
                             "   =0: re-using the same window
-                            "   =1: horizontally splitting the window first 
-                            "   =2: vertically   splitting the window first 
+                            "   =1: horizontally splitting the window first
+                            "   =2: vertically   splitting the window first
                             "   =3: open file in new tab
                             "   =4: act like 'P' (ie. open previous window)
 
@@ -157,12 +159,12 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if &t_Co >= 256 || has("gui_running")
-	" solarized options 
+	" solarized options
 	set background=dark
-	let g:solarized_termcolors=256 
-	let g:solarized_visibility="normal" 
-	let g:solarized_contrast="high" 
-	colorscheme solarized 
+	let g:solarized_termcolors=256
+	let g:solarized_visibility="normal"
+	let g:solarized_contrast="high"
+	colorscheme solarized
 endif
 
 " Convenient command to see the difference between the current buffer and the
