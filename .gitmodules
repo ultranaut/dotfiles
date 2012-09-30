@@ -19,9 +19,6 @@
 [submodule "_vim/bundle/surround"]
 	path = _vim/bundle/surround
 	url = https://github.com/tpope/vim-surround
-[submodule "_oh-my-zsh"]
-	path = _oh-my-zsh
-	url = https://github.com/ultranaut/oh-my-zsh.git
 [submodule "_vim/bundle/command-t"]
 	path = _vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
