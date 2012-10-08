@@ -8,11 +8,13 @@
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
 
+filetype off
+
 " load pathogen from bundle directory
 runtime bundle/pathogen/autoload/pathogen.vim
-filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
 filetype plugin indent on
 
 set nocompatible
