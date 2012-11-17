@@ -31,3 +31,6 @@
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
 	url = https://github.com/ultranaut/oh-my-zsh.git
+[submodule "_vim/bundle/markdown"]
+	path = _vim/bundle/markdown
+	url = https://github.com/plasticboy/vim-markdown.git
