@@ -1,7 +1,6 @@
 *.bak
 tags
 .sass-cache
-test*
 
 # Sublime files #
 ########################
