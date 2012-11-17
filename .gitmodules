@@ -4,15 +4,6 @@
 [submodule "_vim/bundle/javascript"]
 	path = _vim/bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
-[submodule "_vim/bundle/fugitive"]
-	path = _vim/bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-[submodule "_vim/bundle/zencoding"]
-	path = _vim/bundle/zencoding
-	url = git://github.com/mattn/zencoding-vim.git
-[submodule "_vim/bundle/markdown"]
-	path = _vim/bundle/markdown
-	url = git://github.com/tpope/vim-markdown.git
 [submodule "vim-surround"]
 	path = vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -28,9 +19,6 @@
 [submodule "_vim/bundle/ragtag"]
 	path = _vim/bundle/ragtag
 	url = https://github.com/tpope/vim-ragtag.git
-[submodule "_vim/bundle/snipmate"]
-	path = _vim/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
 [submodule "_vim/bundle/visincr"]
 	path = _vim/bundle/visincr
 	url = https://github.com/vim-scripts/VisIncr.git
