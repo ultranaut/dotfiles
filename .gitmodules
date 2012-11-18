@@ -16,9 +16,6 @@
 [submodule "_vim/bundle/align"]
 	path = _vim/bundle/align
 	url = https://github.com/tsaleh/vim-align.git
-[submodule "_vim/bundle/ragtag"]
-	path = _vim/bundle/ragtag
-	url = https://github.com/tpope/vim-ragtag.git
 [submodule "_vim/bundle/visincr"]
 	path = _vim/bundle/visincr
 	url = https://github.com/vim-scripts/VisIncr.git
@@ -34,3 +31,6 @@
 [submodule "_vim/bundle/markdown"]
 	path = _vim/bundle/markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "_vim/bundle/sparkup"]
+	path = _vim/bundle/sparkup
+	url = https://github.com/bingaman/vim-sparkup.git
