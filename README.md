@@ -16,6 +16,7 @@ Install to `~/.dotfiles` and create symlinks:
     ln -s ~/.dotfiles/bin bin
     ln -s ~/.dotfiles/_gitconfig .gitconfig
     ln -s ~/.dotfiles/_gitignore_global .gitignore_global
+    ln -s ~/.dotfiles/_custom .custom
 
 Switch to working directory and fetch submodules:
 
