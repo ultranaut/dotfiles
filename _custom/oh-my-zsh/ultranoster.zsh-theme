@@ -1,6 +1,7 @@
 # vim:ft=zsh ts=2 sw=2 sts=2
 #
-# agnoster's Theme - https://gist.github.com/3712874
+# A slightly tweaked version of agnoster's Theme
+# https://gist.github.com/3712874
 # A Powerline-inspired theme for ZSH
 #
 # # README
@@ -21,6 +22,12 @@
 # hostname to whether the last call exited with an error to whether background
 # jobs are running in this shell will all be displayed automatically when
 # appropriate.
+
+
+function battery_charge {
+    echo `~/bin/batcharge.py` 2>/dev/null
+}
+
 
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
@@ -102,6 +109,12 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+# Prompt character
+prompt_char() {
+  git branch >/dev/null 2>/dev/null && echo '±' && return
+  echo '$'
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
@@ -112,4 +125,6 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt)
+ $(prompt_char) '
+RPROMPT='$(battery_charge)'
