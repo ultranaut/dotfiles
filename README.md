@@ -12,6 +12,7 @@ Install to `~/.dotfiles` and create symlinks:
     ln -s ~/.dotfiles/_vimrc .vimrc
     ln -s ~/.dotfiles/_oh-my-zsh .oh-my-zsh
     ln -s ~/.dotfiles/_zshrc .zshrc
+    ln -s ~/.dotfiles/_bashrc .bashrc
     ln -s ~/.dotfiles/_jshintrc .jshintrc
     ln -s ~/.dotfiles/bin bin
     ln -s ~/.dotfiles/_gitconfig .gitconfig
