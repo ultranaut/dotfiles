@@ -34,9 +34,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/bin:/usr/local/mysql/bin:$PATH; export PATH
+PATH=$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/mysql/bin
+
 alias ll='ls -l'
-alias l='ls -al'
+alias l='ls -alF'
 alias ping='ping -c 4'
 
 alias aa1='ssh admin@www1.rachaelray.com'
