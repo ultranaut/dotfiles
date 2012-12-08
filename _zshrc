@@ -34,7 +34,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/mysql/bin
+PATH=$PATH:/opt/local/bin:/opt/local/sbin:~/bin:/usr/local/mysql/bin:.
 
 alias ll='ls -l'
 alias l='ls -alF'
