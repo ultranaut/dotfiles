@@ -1,24 +1,20 @@
 [alias]
-	st = status
-	tst = status
-	co = checkout
-	b = branch
-	c = commit
-	
-	cleanup = ! git fsck && git prune && git gc
-	realclean = ! git fsck && git prune && git gc --aggressive
-	
-	; via http://oli.jp/2012/git-powerup/
-	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20
-	ll = log --stat --abbrev-commit
-	d = diff --color-words
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+  st = status
+  co = checkout
+  b = branch
+  c = commit
+
+  cleanup = ! git fsck && git prune && git gc
+  realclean = ! git fsck && git prune && git gc --aggressive
+
+  ; via http://oli.jp/2012/git-powerup/
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [color]
-	status = auto
-	branch = auto
-	ui = auto
+  status = auto
+  branch = auto
+  ui = auto
   interactive = auto
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
-	pager = less -r
+  excludesfile = ~/.gitignore_global
+  editor = vim
+  pager = less -r
