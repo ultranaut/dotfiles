@@ -6,7 +6,8 @@ ZSH_CUSTOM=$HOME/.custom/oh-my-zsh      # path to custom config files
 ZSH_THEME="ultranoster"                 # theme to load.
 CASE_SENSITIVE="true"                   # use case-sensitive completion
 plugins=(git osx vi-mode)               # plugins in ~/.oh-my-zsh/plugins/*
-source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh                # what it says
+unsetopt correct_all                    # disable the !helpful autocorrect
 
 
 #===============================================================================
