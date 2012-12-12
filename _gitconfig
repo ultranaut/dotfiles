@@ -1,12 +1,6 @@
 [alias]
-  st = status
-  co = checkout
-  b = branch
-  c = commit
-
   cleanup = ! git fsck && git prune && git gc
   realclean = ! git fsck && git prune && git gc --aggressive
-
   ; via http://oli.jp/2012/git-powerup/
   alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 [color]

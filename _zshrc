@@ -21,10 +21,12 @@ zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
 
 #--- Aliases (and a function) ------------------------------------------
-#--- file stuff ------------------------
-alias l='ls -alF'
-alias ll='ls -l'
-lls () { l "$@" | less }
+#--- file system-y stuff ------------------------
+alias l='ls -alF'                       # that's how I dooz it larry
+alias ll='ls -lF'                       # omit hidden files from listing
+lls () { l "$@" | less }                # paginate ls
+alias path="echo ${PATH} | tr ':' '\n'" # easier to read/type path listing
+alias ez="vim ~/.zshrc"                 # quick edit zshrc
 
 #--- network-y stuff -------------------
 alias ping='ping -c 4'
