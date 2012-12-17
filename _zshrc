@@ -27,6 +27,7 @@ alias ll='ls -lF'                       # omit hidden files from listing
 lls () { l "$@" | less }                # paginate ls
 alias path="echo ${PATH} | tr ':' '\n'" # easier to read/type path listing
 alias ez="vim ~/.zshrc"                 # quick edit zshrc
+alias dbox="cd ~/Dropbox"               # go to my Dropbox
 
 #--- network-y stuff -------------------
 alias ping='ping -c 4'
