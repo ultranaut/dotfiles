@@ -12,3 +12,6 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   pager = less -r
+[user]
+	name = John Shearer
+	email = john@ultranaut.com
