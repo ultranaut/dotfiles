@@ -28,6 +28,7 @@ lls () { l "$@" | less }                # paginate ls
 alias path="echo ${PATH} | tr ':' '\n'" # easier to read/type path listing
 alias ez="vim ~/.zshrc"                 # quick edit zshrc
 alias dbox="cd ~/Dropbox"               # go to my Dropbox
+alias sw='sass --watch -tcompressed css/sass:css &'
 
 #--- network-y stuff -------------------
 alias ping='ping -c 4'
@@ -40,13 +41,13 @@ alias ult='ssh ultranaut@ve.5z7vqzxn.vesrv.com'
 # there's a whole bunch more in
 # _oh-my-zsh/plugins/git/git.plugin.zsh
 # these are here to override/add to those
-alias gb='git rebase'
 alias gc='git commit'
 alias gca='git commit -v -a'
 alias gcv='git commit -v'
 alias gd="git diff --color-words"
 alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
 alias gll="git log --stat --abbrev-commit"
+alias grb='git rebase'
 
 
 #===============================================================================
