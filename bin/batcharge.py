@@ -13,8 +13,8 @@ def showBattery(output):
   charge_threshold = int(math.ceil(10 * charge))
 
   # Output
-  srtb = u"\u25b8"    # ▸
-  srtw = u"\u25b9"    # ▹
+  srtb = u"\u25b8"    # ▸ (small right triangle black)
+  srtw = u"\u25b9"    # ▹ (small right triangle white)
 
   total_slots, slots = 10, []
   filled = int(math.ceil(charge_threshold * (total_slots / 10.0))) * srtb
@@ -37,13 +37,13 @@ def showBattery(output):
 
 def main():
   try:
-    p = subprocess.Popen(["ioreggs", "-rc", "AppleSmartBattery"], stdout=subprocess.PIPE)
+    p = subprocess.Popen(["ioreg", "-rc", "AppleSmartBattery"], stdout=subprocess.PIPE)
   except OSError:
     return
 
   output = p.communicate()[0]
   if len(output):
-    showBattery(outpu)
+    showBattery(output)
 
 if __name__ == '__main__':
-      main()
+  main()
