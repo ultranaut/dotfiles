@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 # coding=UTF-8
+import math, subprocess, sys
 
-import math, subprocess
-
-p = subprocess.Popen(["ioreg", "-rc", "AppleSmartBattery"], stdout=subprocess.PIPE)
-output = p.communicate()[0]
-
-if len(output):
+def showBattery(output):
   o_max = [l for l in output.splitlines() if 'MaxCapacity' in l][0]
   o_cur = [l for l in output.splitlines() if 'CurrentCapacity' in l][0]
 
@@ -25,7 +21,6 @@ if len(output):
   empty = (total_slots - len(filled)) * srtw
 
   out = (filled + empty).encode('utf-8')
-  import sys
 
   color_green = '%{[32m%}'
   color_yellow = '%{[1;33m%}'
@@ -39,3 +34,16 @@ if len(output):
 
   out = color_out + out + color_reset
   sys.stdout.write(out)
+
+def main():
+  try:
+    p = subprocess.Popen(["ioreggs", "-rc", "AppleSmartBattery"], stdout=subprocess.PIPE)
+  except OSError:
+    return
+
+  output = p.communicate()[0]
+  if len(output):
+    showBattery(outpu)
+
+if __name__ == '__main__':
+      main()
