@@ -30,6 +30,7 @@ alias ll='ls -lF'                       # omit hidden files from listing
 alias path="echo ${PATH} | tr ':' '\n'" # easier to read/type path listing
 alias ping='ping -c 4'                  # dos style
 alias sw='sass --watch -tcompressed css/sass:css &'
+alias swd='sass --watch --debug-info -tcompact css/sass:css &'
 
 #--- git stuff -------------------------
 # there's a whole bunch more in ~/.oh-my-zsh/plugins/git/git.plugin.zsh
