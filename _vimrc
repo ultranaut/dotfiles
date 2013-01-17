@@ -107,7 +107,7 @@ vnoremap <tab> %
 " search directory recursively for word under cursor
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
 " search and replace visual selection
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
 
 " quick save
 nnoremap <F2> :w<cr>
