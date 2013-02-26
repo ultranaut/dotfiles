@@ -18,3 +18,7 @@ Session.vim
 .netrwhist
 *.swp
 *~
+
+# codekit generated files #
+#######################
+codekit-config.json
