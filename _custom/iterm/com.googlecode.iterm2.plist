@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AdjustWindowForFontSizeChange</key>
+	<true/>
+	<key>AllowClipboardAccess</key>
+	<false/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -725,6 +729,8 @@
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
+	<key>NSScrollAnimationEnabled</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -758,13 +764,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>786 512 445 270 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>516 395 924 485 0 0 1920 1178 </string>
+	<string>516 395 605 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>155 594 592 584 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>963 96 898 1066 0 0 1920 1178 </string>
+	<string>1920 362 650 826 1920 -240 900 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>27 352 650 826 0 0 1920 1178 </string>
+	<string>0 92 954 1086 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>296 100 730 826 0 0 1920 1178 </string>
 	<key>NeverWarnAboutShortLivedSessions_73709158-7A8B-4385-8C43-D4C3C537945F</key>
@@ -2206,6 +2212,8 @@
 			<string>/Users/jshearer</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>NotFirstRun</key>
 	<true/>
 	<key>OnlyWhenMoreTabs</key>
@@ -2272,7 +2280,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2012-12-10T02:15:05Z</date>
+	<date>2013-03-04T16:21:10Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3118,6 +3126,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20120203</string>
+	<string>1.0.0.20130302</string>
 </dict>
 </plist>
