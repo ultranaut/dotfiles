@@ -1,6 +1,13 @@
+" source: http://google-styleguide.googlecode.com/svn/trunk/google_python_style.vim
+
 " Indent Python in the Google way.
 
 setlocal indentexpr=GetGooglePythonIndent(v:lnum)
+
+" whitespace and indentation
+set tabstop=4          " tab characters are 2 spaces wide
+set softtabstop=4      "
+set shiftwidth=4       " number of spaces to use for indentation in normal mode
 
 let s:maxoff = 50 " maximum number of lines to look backwards.
 
