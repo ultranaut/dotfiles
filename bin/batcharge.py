@@ -15,10 +15,12 @@ def showBattery(output):
   # Output
   srtb = u"\u25b8"    # ▸ (small right triangle black)
   srtw = u"\u25b9"    # ▹ (small right triangle white)
+  ssq = u'◼'          # ◼ (solid square)
+  esq = u'◻'          # ◻ (empty square)
 
   total_slots, slots = 10, []
-  filled = int(math.ceil(charge_threshold * (total_slots / 10.0))) * srtb
-  empty = (total_slots - len(filled)) * srtw
+  filled = int(math.ceil(charge_threshold * (total_slots / 10.0))) * ssq
+  empty = (total_slots - len(filled)) * esq
 
   out = (filled + empty).encode('utf-8')
 

@@ -35,6 +35,9 @@ function battery_charge {
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR='⮀'
 
+ONLINE='%{%F{green}%}◉'
+OFFLINE='%{%F{red}%}◉'
+
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
 # rendering default background/foreground.
@@ -90,6 +93,14 @@ prompt_git() {
   fi
 }
 
+function prompt_online() {
+  if [[ -f ~/.offline ]]; then
+    echo $OFFLINE
+  else
+    echo $ONLINE
+  fi
+}
+
 # Dir: current working directory
 prompt_dir() {
   prompt_segment blue black '%~'
@@ -119,12 +130,13 @@ prompt_char() {
 build_prompt() {
   RETVAL=$?
   prompt_status
-  prompt_context
-  prompt_dir
+  #prompt_context
   prompt_git
+  prompt_dir
   prompt_end
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt)
  $(prompt_char) '
+
 RPROMPT='$(battery_charge)'
