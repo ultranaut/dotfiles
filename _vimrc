@@ -17,12 +17,13 @@ call pathogen#helptags()
 
 filetype plugin indent on
 
-set nocompatible
+set nocompatible       " disable vi-compatibility
 
 "   Editor behavior
 set backspace=indent,eol,start
 set clipboard=unnamed
 set cursorline         " highlight line cursor is on
+set encoding=utf-8     " show unicode glyphs
 set foldcolumn=4       " foldcolumn width
 set foldmethod=manual  " set fold method
 set gdefault           " default to global substitutions
@@ -75,6 +76,11 @@ let g:netrw_browse_split=3  " Open file in previous buffer
                             "   =2: vertically   splitting the window first
                             "   =3: open file in new tab
                             "   =4: act like 'P' (ie. open previous window)
+
+" vim-powerline settings
+let g:Powerline_symbols='fancy'
+" let g:Powerline_theme='solarized256'
+
 
 " split windows conveniences
 noremap <leader>w <C-w>v<C-w>l
