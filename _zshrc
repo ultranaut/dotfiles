@@ -22,17 +22,20 @@ zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
 
 #--- Aliases (and a function) ------------------------------------------
-alias dbox="cd ~/Dropbox"               # go to my Dropbox
-alias ez="vim ~/.zshrc"                 # quick edit zshrc
-alias l='ls -alF'                       # that's how I dooz it larry
-lls () { l "$@" | less }                # paginate ls
-alias ll='ls -lF'                       # omit hidden files from listing
-alias path="echo ${PATH} | tr ':' '\n'" # easier to read/type path listing
-alias ping='ping -c 4'                  # dos style
+alias dbox="cd ~/Dropbox"                     # go to my Dropbox
+alias ez="vim ~/.zshrc"                       # quick edit zshrc
+alias flushdns='sudo dscacheutil -flushcache' # clear the dns cache
+alias l='ls -alF'                             # that's how I dooz it larry
+lls () { l "$@" | less }                      # paginate ls
+alias ll='ls -lF'                             # omit hidden files from listing
+alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
+alias ping='ping -c 4'                        # dos style
+
+#--- Sass watch --------------------------------------------------------
 alias sw='sass --watch -tcompressed css/sass:css &'
 alias swd='sass --watch --debug-info -tcompact css/sass:css &'
 
-#--- git stuff -------------------------
+#--- git stuff ---------------------------------------------------------
 # there's a whole bunch more in ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 # these are here to override/add to those
 alias gc='git commit'
