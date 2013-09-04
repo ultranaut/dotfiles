@@ -46,6 +46,3 @@
 [submodule "_vim/bundle/vim-markdown"]
 	path = _vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "_vim/bundle/tabline.vim"]
-	path = _vim/bundle/tabline.vim
-	url = git://github.com/mkitt/tabline.vim.git
