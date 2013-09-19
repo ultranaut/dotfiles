@@ -9,7 +9,6 @@ sftp-*.json
 # OS files #
 ############
 .DS_Store*
-Icon?
 Thumbs.db
 
 # vim generated files #
