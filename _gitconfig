@@ -15,3 +15,5 @@
 [user]
 	name = John Shearer
 	email = john@ultranaut.com
+[push]
+	default = matching
