@@ -70,7 +70,7 @@ fi
 # autojump
 #===============================================================================
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
-
+autoload -U compinit && compinit -u
 
 #===============================================================================
 # This loads NVM
