@@ -69,9 +69,8 @@ fi
 #===============================================================================
 # autojump
 #===============================================================================
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
+[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
 autoload -U compinit && compinit -u
-
 #===============================================================================
 # This loads NVM
 # https://github.com/creationix/nvm
