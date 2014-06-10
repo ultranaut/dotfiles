@@ -32,6 +32,7 @@ lls () { l "$@" | less }                      # paginate ls
 alias ll='ls -lF'                             # omit hidden files from listing
 alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
 alias ping='ping -c 4'                        # dos style
+alias mjson='python -mjson.tool'              # pretty prints json
 
 #--- Sass watch --------------------------------------------------------
 alias sw='sass --watch -tcompressed css/sass:css &'
