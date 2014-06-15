@@ -206,6 +206,9 @@ hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 
+" Automatically set filetype for specific files or file extensions
+autocmd BufNewFile,BufRead composer.lock set filetype=json   " what it says
+
 
 " Set swap, backup and views directories
 " Put them in $HOMEDIR to avoid clutter in working files
