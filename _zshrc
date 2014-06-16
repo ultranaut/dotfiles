@@ -31,6 +31,7 @@ alias l='ls -alF'                             # that's how I dooz it larry
 lls () { l "$@" | less }                      # paginate ls
 alias ll='ls -lF'                             # omit hidden files from listing
 alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
+alias dirs="dirs | tr ' ' '\n':"           # friendlier `dirs` listing
 alias ping='ping -c 4'                        # dos style
 alias mjson='python -mjson.tool'              # pretty prints json
 
