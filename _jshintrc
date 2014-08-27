@@ -69,6 +69,5 @@
     "white"         : true,   // Check against strict whitespace and indentation rules.
 
     "camelcase"     : true,
-    "quotmark"      : "single",
-    "maxlen"        : 80
+    "quotmark"      : "single"
 }
