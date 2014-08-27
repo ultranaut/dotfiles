@@ -21,3 +21,4 @@ Session.vim
 # codekit generated files #
 #######################
 codekit-config.json
+config.codekit
