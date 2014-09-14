@@ -2,15 +2,4 @@ alias ll='ls -l'
 alias l='ls -alF'
 alias ping='ping -c 4'
 
-alias aa1='ssh admin@www1.rachaelray.com'
-alias aa2='ssh admin@www2.rachaelray.com'
-alias adb='ssh admin@db1.rachaelray.com'
-
-alias rr1='ssh jshearer@www1.rachaelray.com'
-alias rr2='ssh jshearer@www2.rachaelray.com'
-alias db1='ssh jshearer@db1.rachaelray.com'
-
-alias ult='ssh ultranaut@ve.5z7vqzxn.vesrv.com'
-
 alias gi='git'
-
