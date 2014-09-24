@@ -47,5 +47,5 @@ def main():
   if len(output):
     showBattery(output)
 
-if __name__ == '__main__':
+if __name__ == '__main__' and sys.version_info.major is not 3:
   main()
