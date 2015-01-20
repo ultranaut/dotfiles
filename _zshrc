@@ -15,8 +15,17 @@ unsetopt correct_all                  # disable the !helpful autocorrect
 
 
 #===============================================================================
-# virtualenvwrapper
+# Python virtualenv
 #===============================================================================
+# pip should only run if there is a virtualenv currently activated
+# to avoid inadvertently installing global packages
+export PIP_REQUIRE_VIRTUALENV=true
+# workaround virtualenv requirement
+gpip() {
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+# virtualenvwrapper config
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
