@@ -1,60 +1,53 @@
-[submodule "_vim/bundle/solarized"]
-	path = _vim/bundle/solarized
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "_vim/bundle/javascript"]
-	path = _vim/bundle/javascript
-	url = git://github.com/pangloss/vim-javascript.git
-[submodule "vim-surround"]
-	path = vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "_vim/bundle/surround"]
-	path = _vim/bundle/surround
-	url = https://github.com/tpope/vim-surround
-[submodule "_vim/bundle/command-t"]
-	path = _vim/bundle/command-t
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
-[submodule "_vim/bundle/align"]
-	path = _vim/bundle/align
+[submodule ".vim/bundle/align"]
+	path = .vim/bundle/align
 	url = https://github.com/tsaleh/vim-align.git
-[submodule "_vim/bundle/visincr"]
-	path = _vim/bundle/visincr
+[submodule ".vim/bundle/visincr"]
+	path = .vim/bundle/visincr
 	url = https://github.com/vim-scripts/VisIncr.git
-[submodule "_vim/bundle/syntastic"]
-	path = _vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "_vim/bundle/pathogen"]
-	path = _vim/bundle/pathogen
+  ignore = untracked
+[submodule ".vim/bundle/pathogen"]
+	path = .vim/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "_vim/bundle/sparkup"]
-	path = _vim/bundle/sparkup
-	url = https://github.com/bingaman/vim-sparkup.git
-[submodule "_oh-my-zsh"]
-	path = _oh-my-zsh
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "_vim/bundle/matchit"]
-	path = _vim/bundle/matchit
+[submodule ".vim/bundle/matchit"]
+	path = .vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "_vim/bundle/commentary"]
-	path = _vim/bundle/commentary
+  ignore = untracked
+[submodule ".vim/bundle/commentary"]
+	path = .vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "_vim/bundle/powerline"]
-	path = _vim/bundle/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "_vim/bundle/fugitive"]
-	path = _vim/bundle/fugitive
+[submodule ".vim/bundle/fugitive"]
+	path = .vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "_vim/bundle/vim-markdown"]
-	path = _vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "_vim/bundle/tabline"]
-	path = _vim/bundle/tabline
-	url = git://github.com/mkitt/tabline.vim.git
-[submodule "_vim/bundle/qargs"]
-	path = _vim/bundle/qargs
-	url = https://github.com/nelstrom/vim-qargs.git
-[submodule "_vim/bundle/nerdtree"]
-	path = _vim/bundle/nerdtree
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "_vim/bundle/json"]
-	path = _vim/bundle/json
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/surround"]
+	path = .vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/qargs"]
+	path = .vim/bundle/qargs
+	url = https://github.com/nelstrom/vim-qargs.git
+[submodule ".vim/bundle/json"]
+	path = .vim/bundle/json
 	url = https://github.com/elzr/vim-json.git
+[submodule ".vim/bundle/sparkup"]
+	path = .vim/bundle/sparkup
+	url = https://github.com/rstacruz/sparkup.git
+[submodule ".vim/bundle/tabline"]
+	path = .vim/bundle/tabline
+	url = https://github.com/mkitt/tabline.vim.git
+[submodule ".vim/bundle/javascript"]
+	path = .vim/bundle/javascript
+	url = https://github.com/jelera/vim-javascript-syntax.git

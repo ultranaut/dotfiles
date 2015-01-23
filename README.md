@@ -8,16 +8,16 @@ Install to `~/.dotfiles` and create symlinks:
 
     cd ~
     git clone git://github.com/ultranaut/dotfiles.git ~/.dotfiles
-    ln -s ~/.dotfiles/_vim .vim
-    ln -s ~/.dotfiles/_vimrc .vimrc
-    ln -s ~/.dotfiles/_oh-my-zsh .oh-my-zsh
-    ln -s ~/.dotfiles/_zshrc .zshrc
-    ln -s ~/.dotfiles/_bashrc .bashrc
-    ln -s ~/.dotfiles/_jshintrc .jshintrc
+    ln -s ~/.dotfiles/.vim .vim
+    ln -s ~/.dotfiles/.vimrc .vimrc
+    ln -s ~/.dotfiles/.oh-my-zsh .oh-my-zsh
+    ln -s ~/.dotfiles/.zshrc .zshrc
+    ln -s ~/.dotfiles/.bashrc .bashrc
+    ln -s ~/.dotfiles/.jshintrc .jshintrc
     ln -s ~/.dotfiles/bin bin
-    ln -s ~/.dotfiles/_gitconfig .gitconfig
-    ln -s ~/.dotfiles/_gitignore_global .gitignore_global
-    ln -s ~/.dotfiles/_custom .custom
+    ln -s ~/.dotfiles/.gitconfig .gitconfig
+    ln -s ~/.dotfiles/.gitignore_global .gitignore_global
+    ln -s ~/.dotfiles/.custom .custom
 
 Switch to working directory and fetch submodules:
 
