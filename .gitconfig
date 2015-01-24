@@ -1,3 +1,6 @@
+[user]
+	name = John Shearer
+	email = john@ultranaut.com
 [alias]
   cleanup = ! git fsck && git prune && git gc
   realclean = ! git fsck && git prune && git gc --aggressive
@@ -12,8 +15,5 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   pager = less -r
-[user]
-	name = John Shearer
-	email = john@ultranaut.com
 [push]
-	default = matching
+	default = simple
