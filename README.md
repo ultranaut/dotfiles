@@ -4,20 +4,11 @@ Word.
 
 ## Installation
 
-Install to `~/.dotfiles` and create symlinks:
+Install to `~/.dotfiles` and run `setup.py`:
 
     cd ~
     git clone git://github.com/ultranaut/dotfiles.git ~/.dotfiles
-    ln -s ~/.dotfiles/.vim .vim
-    ln -s ~/.dotfiles/.vimrc .vimrc
-    ln -s ~/.dotfiles/.oh-my-zsh .oh-my-zsh
-    ln -s ~/.dotfiles/.zshrc .zshrc
-    ln -s ~/.dotfiles/.bashrc .bashrc
-    ln -s ~/.dotfiles/.jshintrc .jshintrc
-    ln -s ~/.dotfiles/bin bin
-    ln -s ~/.dotfiles/.gitconfig .gitconfig
-    ln -s ~/.dotfiles/.gitignore_global .gitignore_global
-    ln -s ~/.dotfiles/.custom .custom
+    ~/setup.py
 
 Switch to working directory and fetch submodules:
 
