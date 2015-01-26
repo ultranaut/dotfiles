@@ -7,8 +7,8 @@ Word.
 Install to `~/.dotfiles` and run `setup.py`:
 
     cd ~
-    git clone git://github.com/ultranaut/dotfiles.git ~/.dotfiles
-    ~/setup.py
+    git clone https://github.com/ultranaut/dotfiles.git ~/.dotfiles
+    ~/.dotfiles/setup.py
 
 Switch to working directory and fetch submodules:
 
