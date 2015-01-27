@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-import inspect, os
+import subprocess, inspect, os
+
+# TODO: run `rake make` in command-t bundle
 
 # these files don't need to be symlimked
 dont_link = [
@@ -26,6 +28,7 @@ def make_symlinks():
       else:
         os.symlink(src, dest)
         linked.append([dest, src])
+        print ("  %s => %s" % (dest, src))
   return linked
 
 
@@ -39,9 +42,10 @@ if __name__ == "__main__":
 
   print "\nStarting..."
 
+  # Create the symlinks.
   print "\nCreating links..."
   linked = make_symlinks()
 
-  for link in linked:
-    print "  ", link[0], "=>", link[1]
-  # os.chdir(dotfiles_root)
+  # fetch and initialize submodules
+  subprocess.call(['git', 'submodule', 'update', '--init'])
+  
