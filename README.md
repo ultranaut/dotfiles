@@ -1,24 +1,15 @@
 # dotfiles
-Word.
-
+This is my dotfiles repo. There are many like it, but this one is mine.
 
 ## Installation
 
-Install to `~/.dotfiles` and run `setup.py`:
+Clone the repository and run the setup script:
 
-    cd ~
     git clone https://github.com/ultranaut/dotfiles.git ~/.dotfiles
-    ~/.dotfiles/setup.py
+    cd ~
+    setup.py
 
-Switch to working directory and fetch submodules:
-
-    cd ~/.dotfiles
-    git submodule init
-    git submodule update
-
-The `git-submodule init` and `git-submodule update` can be combined:
-
-    git submodule update --init
+`setup.py` creates symlinks and fetches and initializes the submodules.
 
 Change login shell to zsh:
 
