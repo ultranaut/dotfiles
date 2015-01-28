@@ -92,8 +92,8 @@ fi
 #===============================================================================
 # autojump
 #===============================================================================
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && source ~/.autojump/etc/profile.d/autojump.zsh
-autoload -U compinit && compinit -u
+[[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
+
 #===============================================================================
 # This loads NVM
 # https://github.com/creationix/nvm
