@@ -36,7 +36,7 @@ export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 #===============================================================================
 # personal settings
 #===============================================================================
-PATH=$PATH:~/bin:/usr/local/mysql/bin:.
+PATH=$PATH:~/bin:.
 
 #--- enable vi mode ---------------------------------------------
 bindkey -v
