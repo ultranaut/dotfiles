@@ -11,7 +11,7 @@ DISABLE_AUTO_UPDATE="true"            # stop oh-my-zsh from doing auto-update
 source $ZSH/oh-my-zsh.sh              # what it says
 unsetopt correct_all                  # disable the !helpful autocorrect
 
-: ${UNAME=$(uname)}
+: ${UNAME=$(uname)}                   # no clue...
 
 
 #===============================================================================
@@ -47,11 +47,8 @@ zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
 
 #--- Aliases (and a function) ------------------------------------------
-alias dbox="cd ~/Dropbox"                     # go to my Dropbox
-alias ez="vim ~/.zshrc"                       # quick edit zshrc
 alias flushdns='sudo dscacheutil -flushcache' # clear the dns cache
 alias l='ls -alF'                             # that's how I dooz it larry
-lls () { l "$@" | less }                      # paginate ls
 alias ll='ls -lF'                             # omit hidden files from listing
 alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
 alias dirs="dirs | tr ' ' '\n':"           # friendlier `dirs` listing
