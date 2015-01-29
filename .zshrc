@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh                  # path to your oh-my-zsh config
 ZSH_CUSTOM=$HOME/.custom/oh-my-zsh    # path to custom config files
 ZSH_THEME="ultranoster"               # theme to load.
 CASE_SENSITIVE="true"                 # use case-sensitive completion
-plugins=(git osx vi-mode history-substring-search)
+plugins=(git osx history-substring-search)
                                       # plugins in ~/.oh-my-zsh/plugins/*
 DISABLE_AUTO_UPDATE="true"            # stop oh-my-zsh from doing auto-update
 source $ZSH/oh-my-zsh.sh              # what it says
