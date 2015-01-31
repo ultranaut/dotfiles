@@ -9,7 +9,6 @@ plugins=(git osx history-substring-search)
                                       # plugins in ~/.oh-my-zsh/plugins/*
 DISABLE_AUTO_UPDATE="true"            # stop oh-my-zsh from doing auto-update
 source $ZSH/oh-my-zsh.sh              # what it says
-unsetopt correct_all                  # disable the !helpful autocorrect
 
 : ${UNAME=$(uname)}                   # no clue...
 
