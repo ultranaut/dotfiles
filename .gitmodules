@@ -51,3 +51,6 @@
 [submodule ".vim/bundle/javascript"]
 	path = .vim/bundle/javascript
 	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule ".vim/bundle/jinja"]
+	path = .vim/bundle/jinja
+	url = https://github.com/lepture/vim-jinja.git
