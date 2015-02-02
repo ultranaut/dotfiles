@@ -54,3 +54,6 @@
 [submodule ".vim/bundle/jinja"]
 	path = .vim/bundle/jinja
 	url = https://github.com/lepture/vim-jinja.git
+[submodule ".custom/zsh-syntax-highlighting"]
+	path = .custom/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
