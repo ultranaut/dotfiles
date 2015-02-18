@@ -38,6 +38,10 @@ alias l='ls -alF'
 # omit hidden files from listing
 alias ll='ls -lF'
 
+# cat with syntax coloring
+alias ccat='pygmentize -g'
+alias dog='ccat'
+
 # friendlier path listing
 alias path="echo ${PATH} | tr ':' '\n'"
 
@@ -54,7 +58,6 @@ alias mjson='python -mjson.tool'
 insert_sudo () { zle beginning-of-line; zle -U "sudo "!! }
 zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
-
 
 #--- Sass watch -------------------------------------------------------
 alias sw='sass --watch -tcompressed css/sass:css &'
