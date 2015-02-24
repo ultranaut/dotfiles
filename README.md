@@ -22,12 +22,12 @@ and enter password when prompted.
 To add a plugin to the bundle directory:
 
     cd ~/.dotfiles
-    git submodule add http://github.com/tpope/vim-foo.git _vim/bundle/foo
+    git submodule add http://github.com/tpope/vim-foo.git .vim/bundle/foo
     git commit -m "Install foo.vim bundle as submodule"
 
 To upgrade an individual submodule:
 
-    cd ~/.dotfiles/_vim/bundle/foo
+    cd ~/.dotfiles/.vim/bundle/foo
     git pull origin master
 
 To upgrade all submodules:
