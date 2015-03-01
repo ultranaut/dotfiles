@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 : ${UNAME=$(uname)}
 
 
-#--- path -------------------------------------------------------------
+#--- add our bin dir and cwd to the path --------------------------------------
 PATH=$PATH:~/bin:.
 
 
@@ -75,6 +75,7 @@ alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Cr
 alias gll="git log --stat --abbrev-commit"
 alias grb='git rebase'
 
+
 #--- Python virtualenv ------------------------------------------------
 # pip should only run if there is a virtualenv currently activated
 # to avoid inadvertently installing global packages
@@ -92,6 +93,13 @@ export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 [ -f "/usr/local/bin/virtualenvwrapper_lazy.sh" ] &&
     source /usr/local/bin/virtualenvwrapper_lazy.sh
 
+
+#--- npm --------------------------------------------------------------
+# github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+NPM_PACKAGES="$HOME/.npm-packages"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH=$NPM_PACKAGES/bin:$PATH
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 #--- Mac OS X specific ------------------------------------------------
 if [ "$UNAME" = Darwin ]; then
