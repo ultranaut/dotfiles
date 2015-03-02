@@ -270,23 +270,3 @@ function GetGooglePythonIndent(lnum)
   return GetPythonIndent(a:lnum)
 
 endfunction
-
-
-" ------------------------------------------------------------------------------
-" Abbreviations
-iab rrc http://www.rachaelray.com/
-iab lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam lacus ligula accumsan id.
-iab llorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula, accumsan id imperdiet rhoncus, dapibus vitae arcu. Nulla non quam erat, luctus consequat nisi.
-iab lllorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacus ligula, accumsan id imperdiet rhoncus, dapibus vitae arcu. Nulla non quam erat, luctus consequat nisi. Integer hendrerit lacus sagittis erat fermentum tincidunt. Cras vel dui neque. In sagittis commodo luctus. Mauris non metus dolor, ut suscipit dui. Aliquam mauris lacus, laoreet et consequat quis, bibendum id ipsum. Donec gravida, diam id imperdiet cursus, nunc nisl bibendum sapien, eget tempor neque elit in tortor.
-
-" http://vim.wikia.com/wiki/Multi-line_abbreviations
-iab plorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla eros nisi, quis consectetur diam condimentum at. Praesent posuere rhoncus orci, id iaculis est bibendum tristique. Suspendisse a nisi egestas, luctus dui in, rutrum urna. Maecenas laoreet lorem velit, at venenatis metus interdum eu. Nulla tristique libero eu neque aliquam ultrices. Ut metus purus, porttitor in mi eu, tincidunt consequat mi. Aliquam ac fringilla nunc, eget dapibus arcu. Sed non fermentum lorem. Pellentesque viverra augue sapien, eu convallis metus tincidunt ac.
-\<CR>
-\<CR>Nullam risus felis, commodo varius vehicula eu, volutpat eget dui. Sed imperdiet dolor eu ante accumsan mattis. Etiam viverra libero nibh, in sollicitudin nunc tincidunt non. Integer ultricies quis risus mollis cursus. Donec erat lorem, venenatis vitae lectus ut, ultricies ornare lorem. Integer vel tellus tempor, vestibulum libero eget, rhoncus odio. Donec suscipit risus a nulla pellentesque, ac posuere risus lobortis. Vestibulum ornare faucibus nunc, ut rhoncus urna ullamcorper id. Nunc lorem libero, dictum a purus ac, faucibus vehicula metus. Cras quam sem, convallis a sem porta, ornare egestas lacus. Morbi consectetur, eros et dignissim gravida, urna mi dignissim leo, sit amet malesuada nibh eros vitae magna.
-\<CR>
-\<CR>Cras lorem nisl, dignissim ac turpis eu, ornare fringilla justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus pellentesque magna, vel feugiat mi pellentesque at. Aliquam in consequat magna. Vestibulum pharetra eros quis iaculis vehicula. Mauris ac pulvinar urna, nec viverra arcu. Mauris mollis at arcu non aliquet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras in erat augue. Sed vel iaculis ligula. Nunc fermentum interdum dui eu scelerisque. Morbi odio ligula, tempus non gravida vitae, dictum a diam.
-\<CR>
-\<CR>Sed sed cursus leo. Quisque quis hendrerit orci. Etiam congue ante vitae sem viverra interdum. Morbi iaculis leo felis, sed aliquet mauris fermentum eu. Mauris mollis consequat nibh, gravida vestibulum augue egestas ac. Ut bibendum luctus vehicula. Quisque lacinia aliquam odio id viverra. Donec ullamcorper leo non ligula tincidunt aliquam. Quisque vehicula turpis ut neque adipiscing rutrum. Pellentesque eleifend gravida sodales. Pellentesque vitae risus vel ante tempus molestie id sed ante.
-\<CR>
-\<CR>Suspendisse condimentum diam nunc, rhoncus lacinia sapien sodales a. Nullam tincidunt ultrices erat eu pretium. Morbi porta, sem nec sollicitudin tincidunt, arcu risus tincidunt ligula, a adipiscing sem sem id erat. Sed arcu metus, venenatis id urna vitae, dictum fringilla dolor. Integer in massa diam. Vivamus hendrerit lorem et tortor vehicula vehicula in ut nunc. Nunc eget tristique lectus. Vivamus rutrum rhoncus sem, quis malesuada purus condimentum eget. In hac habitasse platea dictumst. Mauris imperdiet feugiat sem, ac laoreet mi condimentum id. Sed pellentesque mauris diam. Etiam ac sem at mi condimentum interdum suscipit vel tortor. Mauris pellentesque dapibus velit quis feugiat. Mauris ut metus quam. Mauris rhoncus ligula enim, accumsan scelerisque felis eleifend nec. Proin non purus vel lacus interdum tincidunt.
-
