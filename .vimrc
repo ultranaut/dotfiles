@@ -135,6 +135,12 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
+" --- Syntastic -------------------------------------------------------
+let g:syntastic_check_on_open = 1
+" bootstrap generates a lot of these
+let g:syntastic_html_tidy_ignore_errors=['trimming empty']
+
+
 " create a 'workspace' -- :mksession to create, <F3> to restore
 nmap <F3> <ESC>:call LoadSession()<CR>
 let s:sessionloaded = 0
