@@ -61,6 +61,10 @@ set shiftwidth=2       " number of spaces to use for indentation in normal mode
 set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
 set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
 
+" .mksession options
+set ssop+=globals       " global variables
+set ssop-=blank,buffers " don't save blank windows or unopen buffers
+
 " change the mapleader from \ to ,
 let mapleader=","
 
