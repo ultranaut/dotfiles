@@ -20,6 +20,7 @@ filetype plugin indent on
 set nocompatible       " disable vi-compatibility
 
 "   Editor behavior
+set backspace=2        " indent,eol,start
 set clipboard=unnamed
 set cursorline         " highlight line cursor is on
 set encoding=utf-8     " show unicode glyphs
@@ -30,9 +31,7 @@ set hidden             " hide rather than close buffer on opening new file
 set history=1000       " lots of history
 set laststatus=2       " display status line
 set linebreak
-set modelines=0        " disable modelines
 set nobackup           " turn off auto-backup
-set noerrorbells       " no bell, thank you.
 set number             " always show line numbers
 set ruler              " show the cursor position all the time
 set showmatch          " set show matching parenthesis
@@ -40,9 +39,18 @@ set statusline=%<\"%f\"\ %m%h%r\ [\%{strftime(\"\%m.\%d.\%Y\ \%H\:\%S\",getftime
 set switchbuf+=usetab,newtab
 set title              " change the terminal's title
 set undolevels=1000    " lots of undo
-set visualbell         " visual cue instead of bell
 set wildignore=*.swp,*.bak,*.jpg,*.gif,*.png,*.ico
 set wrap               " enable soft-wrapping
+
+
+" disable modeline
+set nomodeline
+set modelines=0
+
+" completely disable error alerts
+set noerrorbells       " no bell on errors
+set visualbell         " disable non-error beeping
+set t_vb=              " disable screen flash
 
 " search
 set hlsearch           " highlight search terms
@@ -70,20 +78,6 @@ let mapleader=","
 " quick escape in insert mode, keep cursor in same spot
 inoremap jk <Esc>l
 
-" netrw settings to make it more nerdtree-ish
-let g:netrw_liststyle=3     " Use tree-mode as default view
-let g:netrw_preview=1       " preview window shown in vertical split
-let g:netrw_browse_split=3  " Open file in previous buffer
-                            "   =0: re-using the same window
-                            "   =1: horizontally splitting the window first
-                            "   =2: vertically   splitting the window first
-                            "   =3: open file in new tab
-                            "   =4: act like 'P' (ie. open previous window)
-
-" vim-powerline settings
-let g:Powerline_symbols='fancy'
-" let g:Powerline_theme='solarized256'
-
 
 " split windows conveniences
 noremap <leader>w <C-w>v<C-w>l
@@ -93,7 +87,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " --- cursor behaviors ------------------------------------------------
-" re-education
+" disable arrow keys
 nnoremap <up>    <nop>
 nnoremap <down>  <nop>
 nnoremap <left>  <nop>
@@ -117,10 +111,6 @@ vnoremap / /\v
 
 nnoremap <leader><space> :noh<cr>
 
-" vim fugitive shortcuts
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gs :Gstatus<CR>
-
 " search directory recursively for word under cursor
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
 " search and replace visual selection
@@ -141,16 +131,6 @@ set listchars=tab:▸\ ,nbsp:%,eol:¬
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-" Swap default Command-T file open actions
-let g:CommandTAcceptSelectionMap = '<C-t>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
-
-" --- Syntastic -------------------------------------------------------
-let g:syntastic_check_on_open = 1
-" bootstrap generates a lot of these
-let g:syntastic_html_tidy_ignore_errors=['trimming empty']
-
 
 " create a 'workspace' -- :mksession to create, <F3> to restore
 nmap <F3> <ESC>:call LoadSession()<CR>
@@ -215,17 +195,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" Color scheme for tabs (tabline.vim)
-hi TabLine      ctermfg=Black  ctermbg=Yellow    cterm=NONE
-hi TabLineFill  ctermfg=Black  ctermbg=Yellow    cterm=NONE
-hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-
-
-" Automatically set filetype for specific files or file extensions
-autocmd BufNewFile,BufRead composer.lock set filetype=json   " what it says
 
 
 " Set swap, backup and views directories
@@ -259,7 +231,7 @@ endfunction
 call InitializeDirectories()
 
 
-" ------------------------------------------------------------------------------
+" --- Google-style python indentation ---------------------------------
 " https://google-styleguide.googlecode.com/svn/trunk/google_python_style.vim
 function GetGooglePythonIndent(lnum)
 
@@ -288,3 +260,37 @@ function GetGooglePythonIndent(lnum)
   return GetPythonIndent(a:lnum)
 
 endfunction
+
+
+" --- plugins ---------------------------------------------------------
+
+" netrw settings to make it more nerdtree-ish
+let g:netrw_liststyle=3     " Use tree-mode as default view
+let g:netrw_preview=1       " preview window shown in vertical split
+let g:netrw_browse_split=3  " Open file in previous buffer
+                            "   =0: re-using the same window
+                            "   =1: horizontally splitting the window first
+                            "   =2: vertically   splitting the window first
+                            "   =3: open file in new tab
+                            "   =4: act like 'P' (ie. open previous window)
+
+
+" fugitive shortcuts, mostly match cli shortcuts
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>ga :Gwrite<CR>
+
+" Swap default Command-T file open actions
+let g:CommandTAcceptSelectionMap = '<C-t>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
+
+" --- Syntastic -------------------------------------------------------
+let g:syntastic_check_on_open = 1
+" bootstrap generates a lot of these
+let g:syntastic_html_tidy_ignore_errors=['trimming empty']
+
+
+" Tabline
+hi TabLine      ctermfg=Black  ctermbg=Yellow    cterm=NONE
+hi TabLineFill  ctermfg=Black  ctermbg=Yellow    cterm=NONE
+hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
