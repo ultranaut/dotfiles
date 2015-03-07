@@ -20,7 +20,6 @@ filetype plugin indent on
 set nocompatible       " disable vi-compatibility
 
 "   Editor behavior
-set backspace=indent,eol,start
 set clipboard=unnamed
 set cursorline         " highlight line cursor is on
 set encoding=utf-8     " show unicode glyphs
@@ -93,6 +92,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" --- cursor behaviors ------------------------------------------------
 " re-education
 nnoremap <up>    <nop>
 nnoremap <down>  <nop>
@@ -107,13 +107,15 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" some better search settings
+" tob to matching bracket { } [ ] ( )
+nnoremap <tab> %
+vnoremap <tab> %
+
+" --- some better search settings -------------------------------------
 nnoremap / /\v
 vnoremap / /\v
 
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
 " vim fugitive shortcuts
 nnoremap <leader>gd :Gdiff<CR>
@@ -163,6 +165,7 @@ function SaveSession()
   end
 endfunction
 autocmd VimLeave * call SaveSession()
+
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
