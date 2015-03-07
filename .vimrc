@@ -99,6 +99,7 @@ inoremap <down>  <nop>
 inoremap <left>  <nop>
 inoremap <right> <nop>
 
+" move cursor by display lines when wrapping
 nnoremap j gj
 nnoremap k gk
 
@@ -109,6 +110,10 @@ vnoremap / /\v
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
+
+" vim fugitive shortcuts
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gs :Gstatus<CR>
 
 " search directory recursively for word under cursor
 map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
