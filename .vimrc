@@ -120,6 +120,10 @@ vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
 nnoremap <F2> :w<cr>
 inoremap <F2> <C-o>:w<cr>
 
+" yank entire buffer
+nnoremap <leader>c :%y+<CR>
+inoremap <leader>c <C-o>:%y+<CR>
+
 " Act in haste, repent at leisure
 cmap w!! w !sudo tee % >/dev/null
 
