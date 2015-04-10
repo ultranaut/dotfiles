@@ -2,7 +2,7 @@
 " Personal preferences .vimrc file
 " john shearer <john@ultranaut.com>
 "
-" Some sources for this mishmash:
+" Some sources for some of this mishmash:
 "   http://nvie.com/posts/how-i-boosted-my-vim/
 "   https://raw.github.com/nvie/vimrc/master/vimrc
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
@@ -36,6 +36,7 @@ set number             " always show line numbers
 set ruler              " show the cursor position all the time
 set showmatch          " set show matching parenthesis
 set statusline=%<\"%f\"\ %m%h%r\ [\%{strftime(\"\%m.\%d.\%Y\ \%H\:\%S\",getftime(expand(\"\%\%\")))}]%=%-14.(%l,%c%V%)\ %p%%\ [%L]
+set showcmd            " show current command at bottom of screen
 set switchbuf+=usetab,newtab
 set title              " change the terminal's title
 set undolevels=1000    " lots of undo
@@ -63,28 +64,31 @@ set autoindent
 set copyindent         " copy the previous indentation on autoindenting
 set expandtab          " spaces, not tabs
 set tabstop=2          " tab characters are 2 spaces wide
-set softtabstop=2      "
+set softtabstop=2      " so are soft tabs
 set shiftwidth=2       " number of spaces to use for indentation in normal mode
 set smarttab           " insert tabs on the start of a line according to shiftwidth, not tabstop
 set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
 
-" .mksession options
-set ssop+=globals       " global variables
-set ssop-=blank,buffers " don't save blank windows or unopen buffers
 
 " change the mapleader from \ to ,
 let mapleader=","
 
+" retain visual selection when block indenting
+vnoremap > >gv
+vnoremap < <gv
+
 " quick escape in insert mode, keep cursor in same spot
 inoremap jk <Esc>l
 
-
-" split windows conveniences
-noremap <leader>w <C-w>v<C-w>l
+" --- split windows ---------------------------------------------------
+" move cursor between windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" switch horizontal split to vertical and vice versa
+nnoremap <leader>v <C-w>t<C-w>H
+nnoremap <leader>h <C-w>t<C-w>K
 
 " --- cursor behaviors ------------------------------------------------
 " disable arrow keys
@@ -105,7 +109,7 @@ nnoremap k gk
 nnoremap <tab> %
 vnoremap <tab> %
 
-" --- some better search settings -------------------------------------
+" --- search settings -------------------------------------------------
 nnoremap / /\v
 vnoremap / /\v
 
@@ -119,6 +123,13 @@ vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
 " quick save
 nnoremap <F2> :w<cr>
 inoremap <F2> <C-o>:w<cr>
+
+" quicker save
+nnoremap <leader>ss :w<cr>
+inoremap <leader>ss <esc>:w<cr>li
+"quick exit
+nnoremap <leader>x :x<cr>
+inoremap <leader>x <esc>:x<cr>
 
 " yank entire buffer
 nnoremap <leader>c :%y+<CR>
@@ -136,6 +147,7 @@ set listchars=tab:▸\ ,nbsp:%,eol:¬
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" --- sessions --------------------------------------------------------
 " create a 'workspace' -- :mksession to create, <F3> to restore
 nmap <F3> <ESC>:call LoadSession()<CR>
 let s:sessionloaded = 0
@@ -150,6 +162,11 @@ function SaveSession()
 endfunction
 autocmd VimLeave * call SaveSession()
 
+" .mksession options
+set ssop+=globals         " global variables
+set ssop-=blank,buffers   " don't save blank windows or unopen buffers
+
+" ---------------------------------------------------------------------
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
