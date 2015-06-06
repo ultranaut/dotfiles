@@ -307,6 +307,13 @@ let g:CommandTAcceptSelectionTabMap = '<CR>'
 
 " --- Syntastic -------------------------------------------------------
 let g:syntastic_check_on_open = 1
+
+" Use eslint if a config file is available, otherwise fallbak to jshint
+autocmd FileType javascript
+  \ let b:syntastic_checkers = findfile('.eslintrc', '.;') != ''
+  \                            ? ['eslint']
+  \                            : ['jshint']
+
 " bootstrap generates a lot of these
 let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 
