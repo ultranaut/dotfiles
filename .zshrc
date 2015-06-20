@@ -59,6 +59,9 @@ insert_sudo () { zle beginning-of-line; zle -U "sudo "!! }
 zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
 
+# I rarely need all the extra crap
+alias npmls='npm ls --depth=0'
+
 #--- Sass watch -------------------------------------------------------
 alias sw='sass --watch -tcompressed css/sass:css &'
 alias swd='sass --watch --debug-info -tcompact css/sass:css &'
