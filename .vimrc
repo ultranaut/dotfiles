@@ -135,6 +135,13 @@ inoremap <leader>x <esc>:x<cr>
 nnoremap <leader>c :%y+<CR>
 inoremap <leader>c <C-o>:%y+<CR>
 
+" vertically center the current cursor location
+nmap <space> zz
+
+" vertically center the next/previous search result
+nmap n nzz
+nmap N Nzz
+
 " Act in haste, repent at leisure
 cmap w!! w !sudo tee % >/dev/null
 
