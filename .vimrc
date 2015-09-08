@@ -259,6 +259,11 @@ endfunction
 call InitializeDirectories()
 
 
+" --- Filetypes -------------------------------------------------------
+" default *.md files to markdown instead of modula2
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+
 " --- Google-style python indentation ---------------------------------
 " https://google-styleguide.googlecode.com/svn/trunk/google_python_style.vim
 function GetGooglePythonIndent(lnum)
@@ -325,7 +330,7 @@ autocmd FileType javascript
 let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 
 
-" Tabline
+" --- Tabline ---------------------------------------------------------
 hi TabLine      ctermfg=Black  ctermbg=Yellow    cterm=NONE
 hi TabLineFill  ctermfg=Black  ctermbg=Yellow    cterm=NONE
 hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
