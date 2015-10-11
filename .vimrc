@@ -313,9 +313,14 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>ga :Gwrite<CR>
 
-" Swap default Command-T file open actions
-let g:CommandTAcceptSelectionMap = '<C-t>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
+" --- CtrlP -----------------------------------------------------------
+" Use the CommandT mapping cause I'm used to it
+nnoremap <leader>t :CtrlP<CR>
+" Swap the default opening actions
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': ['<c-t>'],
+  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+  \ }
 
 " --- Syntastic -------------------------------------------------------
 let g:syntastic_check_on_open = 1
