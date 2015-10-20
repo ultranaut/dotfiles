@@ -48,6 +48,12 @@ alias path="echo ${PATH} | tr ':' '\n'"
 # friendlier `dirs` listing
 alias dirs="dirs | tr ' ' '\n':"
 
+# don't need to know everything
+alias size="sudo du -h -d 1"
+
+# text search
+alias srch="grep -rilE"
+
 # dos style
 alias ping='ping -c 4'
 
