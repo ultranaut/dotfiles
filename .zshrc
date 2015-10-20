@@ -49,7 +49,7 @@ alias path="echo ${PATH} | tr ':' '\n'"
 alias dirs="dirs | tr ' ' '\n':"
 
 # don't need to know everything
-alias size="sudo du -h -d 1"
+alias duh="sudo du -h -d 1"
 
 # text search
 alias srch="grep -rilE"
