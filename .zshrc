@@ -112,7 +112,8 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 #--- Mac OS X specific ------------------------------------------------
 if [ "$UNAME" = Darwin ]; then
-  : #no-op for now
+  # list user accounts info
+  alias lsuser="dscacheutil -q user | grep -A 4 -B 2 -e uid:\ 5'[0-9][0-9]'"
 fi
 
 
