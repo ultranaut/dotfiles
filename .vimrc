@@ -339,3 +339,7 @@ let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 hi TabLine      ctermfg=Black  ctermbg=Yellow    cterm=NONE
 hi TabLineFill  ctermfg=Black  ctermbg=Yellow    cterm=NONE
 hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
+
+
+" --- Ack -------------------------------------------------------------
+let g:ackprg = 'ag --nogroup --nocolor --column'
