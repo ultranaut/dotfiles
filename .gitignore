@@ -1,1 +1,6 @@
+# Contains machine-specific settings, auth tokens, etc. 
+.zshenv
+
+
 bin/mongodb
+
