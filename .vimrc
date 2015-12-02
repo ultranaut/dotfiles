@@ -154,6 +154,11 @@ set listchars=tab:▸\ ,nbsp:%,eol:¬
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" --- views -----------------------------------------------------------
+" load and create automatically
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
+
 " --- sessions --------------------------------------------------------
 " create a 'workspace' -- :mksession to create, <F3> to restore
 nmap <F3> <ESC>:call LoadSession()<CR>
