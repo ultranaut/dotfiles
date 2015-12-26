@@ -54,6 +54,9 @@ alias duh="sudo du -h -d 1"
 # text search
 alias srch="grep -rilE"
 
+# dig trace
+alias digt='dig +trace'
+
 # dos style
 alias ping='ping -c 4'
 
