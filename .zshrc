@@ -87,6 +87,15 @@ alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Cr
 alias gll="git log --stat --abbrev-commit"
 alias grb='git rebase'
 
+#--- vagrant aliases --------------------------------------------------
+alias v='vagrant'
+alias vgst='vagrant version && vagrant global-status'
+alias vst='vagrant status'
+alias vup='vagrant up'
+alias vh='vagrant halt'
+alias vssh='vagrant ssh'
+
+
 
 #--- Python virtualenv ------------------------------------------------
 # pip should only run if there is a virtualenv currently activated
