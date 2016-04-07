@@ -86,6 +86,8 @@ alias gd="git diff --color-words"
 alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
 alias gll="git log --stat --abbrev-commit"
 alias grb='git rebase'
+alias gb='git branch -vv'
+alias gba='git branch -avv'
 
 #--- vagrant aliases --------------------------------------------------
 alias v='vagrant'
