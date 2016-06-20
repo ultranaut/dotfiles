@@ -52,7 +52,7 @@ alias dirs="dirs | tr ' ' '\n':"
 alias duh="sudo du -h -d 1"
 
 # text search
-alias srch="grep -rilE"
+alias srch="grep -rlE"
 
 # dig trace
 alias digt='dig +trace'
