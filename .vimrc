@@ -348,3 +348,8 @@ hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
 " --- Ack -------------------------------------------------------------
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+" --- Commentary ------------------------------------------------------
+" set nginx comment string
+autocmd FileType nginx setl cms=#\ %s
