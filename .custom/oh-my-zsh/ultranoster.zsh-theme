@@ -78,6 +78,15 @@ prompt_context() {
   fi
 }
 
+# If shell is running inside vim process, show in prompt
+prompt_vim() {
+  local vim=`env | grep VIMRUNTIME`
+
+  if [[ ! -z $vim ]]; then
+    prompt_segment red white "{vim}"
+  fi
+}
+
 # Git: branch/detached head, dirty status
 prompt_git() {
   local ref dirty
@@ -132,6 +141,7 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   #prompt_context
+  prompt_vim
   prompt_git
   prompt_dir
   prompt_end
