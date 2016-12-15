@@ -20,7 +20,7 @@ def make_symlinks():
   linked = []
   dotfiles_contents = os.listdir(dotfiles_root)
   for item in dotfiles_contents:
-    if item not in dont_link:
+    if item not in dont_link and not item.endswith('.template'):
       src = os.path.join(dotfiles_root, item)
       dest = os.path.join(user_home, item)
       if os.path.exists(dest):
