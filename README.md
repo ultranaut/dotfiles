@@ -7,7 +7,7 @@ Clone the repository and run the setup script:
 
     git clone https://github.com/ultranaut/dotfiles.git ~/.dotfiles
     cd ~
-    setup.py
+    .dotfiles/setup.py
 
 `setup.py` creates symlinks and fetches and initializes the submodules.
 
