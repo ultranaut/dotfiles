@@ -6,8 +6,8 @@ This is my dotfiles repo. There are many like it, but this one is mine.
 Clone the repository and run the setup script:
 
     git clone https://github.com/ultranaut/dotfiles.git ~/.dotfiles
-    cd ~
-    .dotfiles/setup.py
+    cd ~/.dotfiles
+    ./setup.py
 
 `setup.py` creates symlinks and fetches and initializes the submodules.
 
