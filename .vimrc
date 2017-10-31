@@ -110,9 +110,6 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 " --- search settings -------------------------------------------------
-nnoremap / /\v
-vnoremap / /\v
-
 nnoremap <leader><space> :noh<cr>
 
 " search directory recursively for word under cursor
@@ -353,3 +350,9 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " --- Commentary ------------------------------------------------------
 " set nginx comment string
 autocmd FileType nginx setl cms=#\ %s
+
+
+" --- incsearch.vim ---------------------------------------------------
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
