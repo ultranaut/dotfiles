@@ -145,6 +145,10 @@ fi
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
 
+#--- Homebrew ---------------------------------------------------------
+export PATH="/usr/local/sbin:$PATH"
+
+
 #--- Google Cloud SDK -------------------------------------------------
 # The next line updates PATH for the Google Cloud SDK.
 [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ] &&
