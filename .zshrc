@@ -63,6 +63,9 @@ alias ping='ping -c 4'
 # pretty prints json
 alias mjson='python -mjson.tool'
 
+# open Chrome with XSS Auditor disabled for testing XSS
+alias chromeXSS="'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --disable-xss-auditor --enable-devtools-experiments --disable-features=enable-automatic-password-saving"
+
 # Alt-S (Esc-S) inserts "sudo " at the start of line
 insert_sudo () { zle beginning-of-line; zle -U "sudo "!! }
 zle -N insert-sudo insert_sudo
