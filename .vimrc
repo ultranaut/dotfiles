@@ -151,6 +151,10 @@ set listchars=tab:▸\ ,nbsp:%,eol:¬
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+
+" `sort` visual selection
+vnoremap <leader>s :sort<cr>
+
 " --- views -----------------------------------------------------------
 " load and create automatically
 au BufWinLeave ?* mkview
