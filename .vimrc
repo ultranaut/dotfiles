@@ -153,7 +153,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 
 " `sort` visual selection
-vnoremap <leader>s :sort<cr>
+vnoremap <leader>r :sort<cr>'>
 
 " --- views -----------------------------------------------------------
 " load and create automatically
