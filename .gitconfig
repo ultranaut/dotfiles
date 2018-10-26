@@ -15,6 +15,7 @@
   excludesfile = ~/.gitignore_global
   editor = vim
   pager = less -r
+	quotepath = off
 [push]
 	default = simple
 [credential]
