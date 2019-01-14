@@ -269,6 +269,9 @@ call InitializeDirectories()
 " default *.md files to markdown instead of modula2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" recognize C# html files as html
+autocmd BufNewFile,BufRead *.cshtml set filetype=html
+
 
 " --- Google-style python indentation ---------------------------------
 " https://google-styleguide.googlecode.com/svn/trunk/google_python_style.vim
