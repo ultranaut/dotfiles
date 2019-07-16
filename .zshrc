@@ -17,6 +17,9 @@ plugins=(git osx history-substring-search)
 # use case-sensitive completion
 CASE_SENSITIVE="true"
 
+# https://github.com/robbyrussell/oh-my-zsh/issues/6835#issuecomment-390216875
+ZSH_DISABLE_COMPFIX=true
+
 # what it says
 source $ZSH/oh-my-zsh.sh
 
