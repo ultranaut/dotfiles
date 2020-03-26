@@ -69,3 +69,6 @@
 [submodule ".vim/bundle/csv"]
 	path = .vim/bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
+[submodule ".vim/bundle/vim-polyglot"]
+	path = .vim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
