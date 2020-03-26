@@ -36,9 +36,6 @@
 [submodule ".vim/bundle/qargs"]
 	path = .vim/bundle/qargs
 	url = https://github.com/nelstrom/vim-qargs.git
-[submodule ".vim/bundle/json"]
-	path = .vim/bundle/json
-	url = https://github.com/elzr/vim-json.git
 [submodule ".vim/bundle/sparkup"]
 	path = .vim/bundle/sparkup
 	url = https://github.com/rstacruz/sparkup.git
