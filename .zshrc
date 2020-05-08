@@ -41,15 +41,8 @@ alias l='ls -alF'
 # omit hidden files from listing
 alias ll='ls -lF'
 
-# cat with syntax coloring
-alias ccat='pygmentize -g'
-alias dog='ccat'
-
 # friendlier path listing
 alias path="echo ${PATH} | tr ':' '\n'"
-
-# friendlier `dirs` listing
-alias dirs="dirs | tr ' ' '\n':"
 
 # don't need to know everything
 alias duh="sudo du -h -d 1"
@@ -57,51 +50,23 @@ alias duh="sudo du -h -d 1"
 # text search
 alias srch="grep -rlE"
 
-# dig trace
-alias digt='dig +trace'
-
 # dos style
 alias ping='ping -c 4'
 
-# pretty prints json
-alias mjson='python -mjson.tool'
-
-# open Chrome with XSS Auditor disabled for testing XSS
-alias chromeXSS="'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --disable-xss-auditor --enable-devtools-experiments --disable-features=enable-automatic-password-saving"
-
-# Alt-S (Esc-S) inserts "sudo " at the start of line
-insert_sudo () { zle beginning-of-line; zle -U "sudo "!! }
-zle -N insert-sudo insert_sudo
-bindkey "^[s" insert-sudo
-
 # I rarely need all the extra crap
 alias npmls='npm ls --depth=0'
-
-#--- Sass watch -------------------------------------------------------
-alias sw='sass --watch -tcompressed css/sass:css &'
-alias swd='sass --watch --debug-info -tcompact css/sass:css &'
 
 
 #--- git stuff --------------------------------------------------------
 # there's a whole bunch more in ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 # these are here to override/add to those
 alias gc='git commit'
-alias gca='git commit -v -a'
-alias gcv='git commit -v'
 alias gd="git diff --color-words"
 alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
 alias gll="git log --stat --abbrev-commit"
 alias grb='git rebase'
 alias gb='git branch -vv'
 alias gba='git branch -avv'
-
-#--- vagrant aliases --------------------------------------------------
-alias v='vagrant'
-alias vgst='vagrant version && vagrant global-status'
-alias vst='vagrant status'
-alias vup='vagrant up'
-alias vh='vagrant halt'
-alias vssh='vagrant ssh'
 
 
 
@@ -146,22 +111,8 @@ fi
   . $(brew --prefix)/etc/autojump.sh
 
 
-#--- This loads NVM ---------------------------------------------------
-# https://github.com/creationix/nvm
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-
-
 #--- Homebrew ---------------------------------------------------------
 export PATH="/usr/local/sbin:$PATH"
-
-
-#--- Google Cloud SDK -------------------------------------------------
-# The next line updates PATH for the Google Cloud SDK.
-[ -f "$HOME/google-cloud-sdk/path.zsh.inc" ] &&
-    source "$HOME/google-cloud-sdk/path.zsh.inc"
-# The next line enables bash completion for gcloud.
-[ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ] &&
-    source "$HOME/google-cloud-sdk/completion.zsh.inc"
 
 
 #--- command line syntax highlighting, sort of ------------------------
