@@ -30,9 +30,6 @@
 [submodule ".vim/bundle/qargs"]
 	path = .vim/bundle/qargs
 	url = https://github.com/nelstrom/vim-qargs.git
-[submodule ".vim/bundle/sparkup"]
-	path = .vim/bundle/sparkup
-	url = https://github.com/rstacruz/sparkup.git
 [submodule ".vim/bundle/tabline"]
 	path = .vim/bundle/tabline
 	url = https://github.com/mkitt/tabline.vim.git
