@@ -363,3 +363,8 @@ autocmd FileType nginx setl cms=#\ %s
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+
+" --- Emmet -----------------------------------------------------------
+" redefine trigger key
+let g:user_emmet_leader_key=','
