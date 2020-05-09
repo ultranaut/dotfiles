@@ -1,6 +1,6 @@
 # vim:ft=zsh ts=2 sw=2 sts=2
 #
-# A slightly tweaked version of agnoster's theme:
+# An increasingly tweaked version of agnoster's theme:
 #
 #   agnoster's Theme - https://gist.github.com/3712874
 #   A Powerline-inspired theme for ZSH
@@ -28,6 +28,12 @@
 function battery_charge {
     echo `~/bin/batcharge.py` 2>/dev/null
 }
+
+### Some custom colors
+CHERRY=52
+GREENER=34
+OFFWHITE=224
+CHARCOAL=234
 
 
 ### Segment drawing
@@ -95,9 +101,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment yellow black
+      prompt_segment yellow ${CHARCOAL}
     else
-      prompt_segment green black
+      prompt_segment ${GREENER} ${CHARCOAL}
     fi
     echo -n "${ref/refs\/heads\//⭠ }$dirty"
   fi
@@ -113,7 +119,7 @@ function prompt_online() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%~'
+  prompt_segment ${CHERRY} ${OFFWHITE} '%~'
 }
 
 # Status:
