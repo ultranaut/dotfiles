@@ -78,4 +78,8 @@ Full instructions are at the YCM [Full Installation Guide](https://github.com/yc
     cd ~/.vim/bundle/youcompleteme/third_party/ycmd
     npm install -g --prefix third_party/tsserver typescript
 
+Not mentioned in the instructions, but in order to work with Neovim, you may need to go into `~/.vim/bundle/youcompleteme` and run `python install.py`.
+
 `ycm_build` and `regex_build` directories can be removed after installation.
+
+
