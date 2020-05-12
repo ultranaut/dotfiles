@@ -9,6 +9,7 @@
 "   http://stackoverflow.com/q/96044/452233
 
 call plug#begin()
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 filetype off
