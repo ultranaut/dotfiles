@@ -11,6 +11,7 @@
 call plug#begin()
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 filetype off

@@ -37,6 +37,3 @@
 [submodule ".vim/bundle/youcompleteme"]
 	path = .vim/bundle/youcompleteme
 	url = https://github.com/ycm-core/YouCompleteMe.git
-[submodule ".vim/bundle/emmet-vim"]
-	path = .vim/bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
