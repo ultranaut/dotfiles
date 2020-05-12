@@ -10,6 +10,7 @@
 
 call plug#begin()
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 filetype off
