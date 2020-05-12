@@ -124,3 +124,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 
 # highlight `rm -rf` in red:
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+
+#--- added by fzf -----------------------------------------------------
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
