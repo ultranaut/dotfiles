@@ -13,6 +13,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 filetype off
