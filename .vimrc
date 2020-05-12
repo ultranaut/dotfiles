@@ -17,14 +17,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 call plug#end()
 
-filetype off
-
-" load pathogen from bundle directory
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect('bundle/{}')
-call pathogen#helptags()
-
-filetype plugin indent on
 
 set nocompatible       " disable vi-compatibility
 
@@ -326,31 +318,10 @@ let g:netrw_browse_split=3  " Open file in previous buffer
                             "   =4: act like 'P' (ie. open previous window)
 
 
-" fugitive shortcuts, mostly match cli shortcuts
+" --- fugitive --------------------------------------------------------
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>ga :Gwrite<CR>
-
-" --- CtrlP -----------------------------------------------------------
-" Use the CommandT mapping cause I'm used to it
-nnoremap <leader>t :CtrlP<CR>
-" Swap the default opening actions
-let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': ['<c-t>'],
-  \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-  \ }
-
-" --- Syntastic -------------------------------------------------------
-let g:syntastic_check_on_open = 1
-
-" Use eslint if a config file is available, otherwise fallbak to jshint
-autocmd FileType javascript
-  \ let b:syntastic_checkers = findfile('.eslintrc', '.;') != ''
-  \                            ? ['eslint']
-  \                            : ['jshint']
-
-" bootstrap generates a lot of these
-let g:syntastic_html_tidy_ignore_errors=['trimming empty']
 
 
 " --- Tabline ---------------------------------------------------------
@@ -366,12 +337,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " --- Commentary ------------------------------------------------------
 " set nginx comment string
 autocmd FileType nginx setl cms=#\ %s
-
-
-" --- incsearch.vim ---------------------------------------------------
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 
 
 " --- Emmet -----------------------------------------------------------

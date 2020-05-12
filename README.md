@@ -19,11 +19,9 @@ and enter password when prompted.
 
 ## Updating/upgrading submodules
 
-To add a plugin to the bundle directory:
+To create a submodule:
 
-    cd ~/.dotfiles
-    git submodule add http://github.com/tpope/vim-foo.git .vim/bundle/foo
-    git commit -m "Install foo.vim bundle as submodule"
+    git submodule add http://github.com/tpope/foo a/submodule
 
 To remove a submodule:
 
@@ -33,53 +31,10 @@ To remove a submodule:
 
 To upgrade an individual submodule:
 
-    cd ~/.dotfiles/.vim/bundle/foo
+    cd a/submodule
     git pull origin master
 
 To upgrade all submodules:
 
     cd ~/.dotfiles
     git submodule foreach git pull origin master
-
-### Installing YouCompleteMe
-
-Full instructions are at the YCM [Full Installation Guide](https://github.com/ycm-core/YouCompleteMe/wiki/Full-Installation-Guide), but the short version is:
-
-  1) Install YCM and fetch all of it's dependencies
-
-    git submodule add https://github.com/ycm-core/YouCompleteMe.git .vim/bundle/youcompleteme
-    git submodule update --init --recursive
-
-  2) Install `cmake` if necessary
-
-    brew install cmake
-
-  3) Compile the `ycm_core` library
-
-    cd ~
-    mkdir ycm_build && cd ycm_build
-    cmake -G "Unix Makefiles" . ~/.vim/bundle/youcompleteme/third_party/ycmd/cpp
-    cmake --build . --target ycm_core --config Release
-
-  4) Install `watchdog` library
-
-    cd ~/.vim/bundle/youcompleteme/third_party/ycmd/third_party/watchdog_deps/watchdog
-    python setup.py build --build-base=build/3 --build-lib=build/lib3
-
-  5) Build the `regex` module
-
-    cd ~
-    mkdir regex_build && cd regex_build
-    cmake -G "Unix Makefiles" . ~/.vim/bundle/youcompleteme/third_party/ycmd/third_party/cregex
-    cmake --build . --target _regex --config Release
-
-  6) Set up language support
-
-    cd ~/.vim/bundle/youcompleteme/third_party/ycmd
-    npm install -g --prefix third_party/tsserver typescript
-
-Not mentioned in the instructions, but in order to work with Neovim, you may need to go into `~/.vim/bundle/youcompleteme` and run `python install.py`.
-
-`ycm_build` and `regex_build` directories can be removed after installation.
-
-
