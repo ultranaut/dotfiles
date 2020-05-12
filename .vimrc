@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 filetype off
