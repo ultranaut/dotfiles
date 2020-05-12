@@ -8,6 +8,9 @@
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
 
+call plug#begin()
+call plug#end()
+
 filetype off
 
 " load pathogen from bundle directory
