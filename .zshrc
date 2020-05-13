@@ -12,7 +12,7 @@ ZSH_THEME="ultranoster"
 DISABLE_AUTO_UPDATE="true"
 
 # plugins in ~/.oh-my-zsh/plugins/*
-plugins=(git osx history-substring-search)
+plugins=(osx history-substring-search)
 
 # use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -31,43 +31,46 @@ source $ZSH/oh-my-zsh.sh
 PATH=$PATH:~/bin:.
 
 
-#--- Aliases (and a function) -----------------------------------------
-# clear the dns cache
-alias flushdns='sudo dscacheutil -flushcache'
+#--- Aliases ----------------------------------------------------------
+# general stuff
+alias flushdns='sudo dscacheutil -flushcache' # clear the dns cache on Mac OS
+alias l='ls -alF'                             # that's how I dooz it larry
+alias ll='ls -lF'                             # omit hidden files from listing
+alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
+alias duh="sudo du -h -d 1"                   # don't need to know everything
+alias srch="grep -rlE"                        # text search
+alias ping='ping -c 4'                        # dos style
+alias npmls='npm ls --depth=0'                # I rarely need all the extra crap
 
-# that's how I dooz it larry
-alias l='ls -alF'
-
-# omit hidden files from listing
-alias ll='ls -lF'
-
-# friendlier path listing
-alias path="echo ${PATH} | tr ':' '\n'"
-
-# don't need to know everything
-alias duh="sudo du -h -d 1"
-
-# text search
-alias srch="grep -rlE"
-
-# dos style
-alias ping='ping -c 4'
-
-# I rarely need all the extra crap
-alias npmls='npm ls --depth=0'
-
-
-#--- git stuff --------------------------------------------------------
-# there's a whole bunch more in ~/.oh-my-zsh/plugins/git/git.plugin.zsh
-# these are here to override/add to those
-alias gc='git commit'
-alias gd="git diff --color-words"
-alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
-alias gll="git log --stat --abbrev-commit"
-alias grb='git rebase'
+# git stuff
+alias g='git'
+alias ga='git add'
 alias gb='git branch -vv'
 alias gba='git branch -avv'
-
+alias gbd='git branch -d'
+alias gc!='git commit -v --amend'
+alias gc='git commit -v'
+alias gc='git commit -v'
+alias gcb='git checkout -b'
+alias gcf='git config --list'
+alias gcm='git checkout master'
+alias gco='git checkout'
+alias gd="git diff --color-words"
+alias gf='git fetch'
+alias ghh='git help'
+alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
+alias gll="git log --stat --abbrev-commit"
+alias glo="git log --graph --pretty='%Cred%h%Creset %C(auto)%d%Creset %s %Cgreen(%ad)' --date=short"
+alias gm='git merge'
+alias gp='git push'
+alias gr='git remote'
+alias grb='git rebase'
+alias grm='git rm'
+alias grs='git restore'
+alias grt='cd "$(git rev-parse --show-toplevel || echo .)"'
+alias grv='git remote -v'
+alias gst='git status'
+alias gsw='git switch'
 
 
 #--- Python virtualenv ------------------------------------------------
