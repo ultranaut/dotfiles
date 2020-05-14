@@ -129,6 +129,12 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 
+#--- zsh-autosuggestions ----------------------------------------------
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^@' autosuggest-accept
+bindkey '^@' autosuggest-accept
+
+
 #--- fzf (https://github.com/junegunn/fzf) ----------------------------
 # Enable key bindings and auto completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
