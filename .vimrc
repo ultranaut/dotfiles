@@ -18,6 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 
@@ -352,5 +353,16 @@ nnoremap <leader>ff      :Files<CR>
 inoremap <leader>ff <esc>:Files<CR>
 nnoremap <leader>fg :     GFiles<CR>
 inoremap <leader>fg <esc>:GFiles<CR>
+
+
+" --- ALE -------------------------------------------------------------
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_open_list = 1
+
+nmap <silent> [c <Plug>(ale_previous_wrap)
+nmap <silent> ]c <Plug>(ale_next_wrap)
 
 
