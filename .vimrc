@@ -364,12 +364,17 @@ inoremap <leader>fg <esc>:GFiles<CR>
 
 
 " --- ALE -------------------------------------------------------------
+" customize the error message format
+" let g:ale_echo_msg_error_str = 'E'
+" let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" specify specific linter(s) to use for filetype
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
-let g:ale_open_list = 1
 
+" better navigation between errors
 nmap <silent> [c <Plug>(ale_previous_wrap)
 nmap <silent> ]c <Plug>(ale_next_wrap)
 
