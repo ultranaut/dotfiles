@@ -114,6 +114,9 @@ nnoremap k gk
 nnoremap <tab> %
 vnoremap <tab> %
 
+" --- terminal --------------------------------------------------------
+nnoremap <leader>t :vertical below terminal<cr>
+
 " --- search settings -------------------------------------------------
 nnoremap <leader><space> :noh<cr>
 
