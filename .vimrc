@@ -378,7 +378,7 @@ let g:ale_linters = {
 \}
 
 " better navigation between errors
-nmap <silent> [c <Plug>(ale_previous_wrap)
-nmap <silent> ]c <Plug>(ale_next_wrap)
+nmap <silent> [v :ALEPreviousWrap<cr>
+nmap <silent> ]v :ALENextWrap<cr>
 
 
