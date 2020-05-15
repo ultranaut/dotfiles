@@ -162,8 +162,16 @@ vnoremap <leader>r :sort<cr>'>
 
 " --- views -----------------------------------------------------------
 " load and create automatically
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+" https://vi.stackexchange.com/a/13874/29528
+augroup AutoSaveFolds
+  autocmd!
+  " view files are about 500 bytes
+  " bufleave but not bufwinleave captures closing 2nd tab
+  " nested is needed by bufwrite* (if triggered via other autocmd)
+  autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
+  autocmd BufWinEnter ?* silent! loadview
+augroup end
+
 
 " --- sessions --------------------------------------------------------
 " create a 'workspace' -- :mksession to create, <F3> to restore
