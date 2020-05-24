@@ -19,6 +19,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -223,6 +225,10 @@ if &t_Co >= 256 || has("gui_running")
 	colorscheme solarized
 endif
 
+" use solarized dark Airline theme
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -380,5 +386,3 @@ let g:ale_linters = {
 " better navigation between errors
 nmap <silent> [v :ALEPreviousWrap<cr>
 nmap <silent> ]v :ALENextWrap<cr>
-
-
