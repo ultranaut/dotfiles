@@ -228,6 +228,7 @@ endif
 " use solarized dark Airline theme
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -343,12 +344,6 @@ let g:netrw_browse_split=3  " Open file in previous buffer
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>ga :Gwrite<CR>
-
-
-" --- Tabline ---------------------------------------------------------
-hi TabLine      ctermfg=Black  ctermbg=Yellow    cterm=NONE
-hi TabLineFill  ctermfg=Black  ctermbg=Yellow    cterm=NONE
-hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 
 
 " --- Ack -------------------------------------------------------------
