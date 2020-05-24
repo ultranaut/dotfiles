@@ -40,9 +40,9 @@ set laststatus=2       " display status line
 set linebreak
 set nobackup           " turn off auto-backup
 set number             " always show line numbers
+set relativenumber     " use hybrid line numbering
 set ruler              " show the cursor position all the time
 set showmatch          " set show matching parenthesis
-set statusline=%<\"%f\"\ %m%h%r\ [\%{strftime(\"\%m.\%d.\%Y\ \%H\:\%S\",getftime(expand(\"\%\%\")))}]%=%-14.(%l,%c%V%)\ %p%%\ [%L]
 set showcmd            " show current command at bottom of screen
 set switchbuf+=usetab,newtab
 set title              " change the terminal's title
@@ -115,6 +115,10 @@ nnoremap k gk
 " tob to matching bracket { } [ ] ( )
 nnoremap <tab> %
 vnoremap <tab> %
+
+" liven up the page scrolling
+nnoremap <c-e> 3<c-e>
+nnoremap <c-y> 3<c-y>
 
 " --- terminal --------------------------------------------------------
 nnoremap <leader>t :vertical below terminal<cr>
