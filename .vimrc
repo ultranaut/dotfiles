@@ -217,12 +217,12 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if &t_Co >= 256 || has("gui_running")
-	" solarized options
-	set background=dark
-	let g:solarized_termcolors=256
-	let g:solarized_visibility="normal"
-	let g:solarized_contrast="high"
-	colorscheme solarized
+  " solarized options
+  set background=dark
+  let g:solarized_termcolors=256
+  let g:solarized_visibility="normal"
+  let g:solarized_contrast="high"
+  colorscheme solarized
 endif
 
 " use solarized dark Airline theme
@@ -235,7 +235,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+      \ | wincmd p | diffthis
 endif
 
 " visual indicator at column 72
