@@ -367,6 +367,8 @@ let g:user_emmet_leader_key=','
 " --- fzf -------------------------------------------------------------
 nnoremap <leader>ff      :Files<CR>
 inoremap <leader>ff <esc>:Files<CR>
+nnoremap <leader>fb      :Buffers<CR>
+inoremap <leader>fb <esc>:Buffers<CR>
 nnoremap <leader>fg      :GFiles<CR>
 inoremap <leader>fg <esc>:GFiles<CR>
 
