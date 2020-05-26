@@ -8,6 +8,7 @@
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
 
+" --- vim-plug --------------------------------------------------------
 call plug#begin()
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
@@ -24,50 +25,64 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
-set nocompatible       " disable vi-compatibility
+" --- UI chrome -------------------------------------------------------
+set cursorline                    " highlight line cursor is on
+set laststatus=2                  " always display status line
+set number                        " always show line numbers
+set relativenumber                " use hybrid line numbering
+set ruler                         " show the cursor position all the time
+set showmatch                     " set show matching parenthesis
+set showcmd                       " show current command at bottom of screen
+set title                         " change the terminal's title
+set wildmenu                      " visual autocomplete command line menu
 
-"   Editor behavior
-set backspace=2        " indent,eol,start
-set clipboard=unnamed
-set cursorline         " highlight line cursor is on
-set encoding=utf-8     " show unicode glyphs
-set foldcolumn=4       " foldcolumn width
-set foldmethod=manual  " set fold method
-set gdefault           " default to global substitutions
-set hidden             " hide rather than close buffer on opening new file
-set history=1000       " lots of history
-set laststatus=2       " display status line
-set linebreak
-set nobackup           " turn off auto-backup
-set number             " always show line numbers
-set relativenumber     " use hybrid line numbering
-set ruler              " show the cursor position all the time
-set showmatch          " set show matching parenthesis
-set showcmd            " show current command at bottom of screen
+" wrap long lines
+set wrap                          " enable soft-wrapping
+set linebreak                     " break lines at sensible points
+
+" completely disable error alerts
+set noerrorbells                  " no bell on errors
+set visualbell                    " disable non-error beeping
+set t_vb=                         " disable screen flash
+
+
+" --- Folding ---------------------------------------------------------
+set foldcolumn=4                  " foldcolumn width
+set foldmethod=manual             " set fold method
+
+
+" --- Editor behavior -------------------------------------------------
+set backspace=indent,eol,start    " unrestricted backspacing in insert mode
+set clipboard=unnamed             " use the * register for yank, delete, etc.
+set encoding=utf-8                " show unicode glyphs
+set hidden                        " hide buffer on opening new file
+set history=1000                  " lots of history
+set nobackup                      " turn off auto-backup
+set nocompatible                  " disable vi-compatibility
 set switchbuf+=usetab,newtab
-set title              " change the terminal's title
-set undolevels=1000    " lots of undo
-set wildignore=*.swp,*.bak,*.jpg,*.gif,*.png,*.ico
-set wrap               " enable soft-wrapping
-
+set undolevels=1000               " lots of undo
+set wildignore+=*.swp             " files to ignore in wildmenu, etc
+set wildignore+=*.bak
+set wildignore+=*.jpg
+set wildignore+=*.gif
+set wildignore+=*.png
+set wildignore+=*.ico
+set wildmode+=list:full           " list all matches and complete the first
+set wildmode+=full                " complete next full match
 
 " disable modeline
 set nomodeline
 set modelines=0
 
-" completely disable error alerts
-set noerrorbells       " no bell on errors
-set visualbell         " disable non-error beeping
-set t_vb=              " disable screen flash
 
-" search
+" --- Search ----------------------------------------------------------
 set hlsearch           " highlight search terms
 set ignorecase         " ignore case when searching (but see smartcase)
 set incsearch          " show search matches as you type
 set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
 
-" whitespace and indentation
-set autoindent
+" --- Whitespace & indentation ----------------------------------------
+set autoindent         " copy indent from current line when starting a new line
 set copyindent         " copy the previous indentation on autoindenting
 set expandtab          " spaces, not tabs
 set tabstop=2          " tab characters are 2 spaces wide
@@ -198,8 +213,10 @@ endfunction
 autocmd VimLeave * call SaveSession()
 
 " .mksession options
-set ssop+=globals         " global variables
-set ssop-=blank,buffers   " don't save blank windows or unopen buffers
+set ssop+=globals         " save global variables
+set ssop-=blank           " don't save empty windows
+set ssop-=buffers         " don't save unloaded buffers
+set ssop-=options         " don't save options and mappings
 
 " ---------------------------------------------------------------------
 
