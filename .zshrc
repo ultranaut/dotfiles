@@ -1,30 +1,12 @@
 #--- oh my zsh settings -----------------------------------------------
-# path to the oh-my-zsh config
-ZSH=$HOME/.oh-my-zsh
-
-# path to custom config files
-ZSH_CUSTOM=$HOME/.custom/oh-my-zsh
-
-# theme to load.
-ZSH_THEME="ultranoster"
-
-# disable auto-update checks
-DISABLE_AUTO_UPDATE="true"
-
-# plugins in ~/.oh-my-zsh/plugins/*
-plugins=(osx history-substring-search)
-
-# use case-sensitive completion
-CASE_SENSITIVE="true"
-
-# https://github.com/robbyrussell/oh-my-zsh/issues/6835#issuecomment-390216875
-ZSH_DISABLE_COMPFIX=true
-
-# what it says
-source $ZSH/oh-my-zsh.sh
-
-# no clue...
-: ${UNAME=$(uname)}
+ZSH=$HOME/.oh-my-zsh                    # path to the oh-my-zsh config
+ZSH_CUSTOM=$HOME/.custom/oh-my-zsh      # path to custom config files
+ZSH_THEME="ultranoster"                 # theme to load.
+DISABLE_AUTO_UPDATE="true"              # disable auto-update checks
+plugins=(osx history-substring-search)  # plugins in ~/.oh-my-zsh/plugins/*
+CASE_SENSITIVE="true"                   # use case-sensitive completion
+ZSH_DISABLE_COMPFIX=true                # https://github.com/robbyrussell/oh-my-zsh/issues/6835#issuecomment-390216875
+source $ZSH/oh-my-zsh.sh                # what it says
 
 
 #--- add our bin dir and cwd to the path --------------------------------------
@@ -74,40 +56,12 @@ alias gst='git status'
 alias gsw='git switch'
 
 
-#--- Python virtualenv ------------------------------------------------
-# pip should only run if there is a virtualenv currently activated
-# to avoid inadvertently installing global packages
-export PIP_REQUIRE_VIRTUALENV=true
-
-# workaround virtualenv requirement
-gpip() {
-  PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-gpip3() {
-  PIP_REQUIRE_VIRTUALENV="" pip3 "$@"
-}
-
-
-# virtualenvwrapper config
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Projects
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-[ -f "/usr/local/bin/virtualenvwrapper_lazy.sh" ] &&
-    source /usr/local/bin/virtualenvwrapper_lazy.sh
-
-
 #--- npm --------------------------------------------------------------
 # github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 NPM_PACKAGES="$HOME/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH=$NPM_PACKAGES/bin:$PATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-#--- Mac OS X specific ------------------------------------------------
-if [ "$UNAME" = Darwin ]; then
-  # list user accounts info
-  alias lsuser="dscacheutil -q user | grep -A 4 -B 2 -e uid:\ 5'[0-9][0-9]'"
-fi
 
 
 #--- autojump ---------------------------------------------------------
@@ -132,8 +86,9 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 #--- zsh-autosuggestions ----------------------------------------------
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^@' autosuggest-accept
-bindkey '^@' autosuggest-accept
+bindkey '^@' autosuggest-accept         # ctrl-space to accept suggestion
+bindkey '^ ' autosuggest-accept         # these are equivalent, in iTerm anyway
+bindkey '\e[24~' autosuggest-toggle     # F12 to tooggle
 
 
 #--- fzf (https://github.com/junegunn/fzf) ----------------------------
