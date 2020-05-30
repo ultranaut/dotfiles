@@ -345,9 +345,11 @@ let g:netrw_browse_split=3  " Open file in previous buffer
 
 
 " --- fugitive --------------------------------------------------------
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>ga :Gwrite<CR>
+nnoremap <leader>gd  :Gdiffsplit<CR>zR
+nnoremap <leader>gst :Git<CR>
+nnoremap <leader>ga  :Gwrite<CR>
+nnoremap <leader>gc  :G commit<CR>
+nnoremap <leader>gp  :G push<CR>
 
 
 " --- Ack -------------------------------------------------------------
