@@ -16,8 +16,8 @@ PATH=$PATH:~/bin:.
 #--- Aliases ----------------------------------------------------------
 # general stuff
 alias flushdns='sudo dscacheutil -flushcache' # clear the dns cache on Mac OS
-alias l='ls -alF'                             # that's how I dooz it larry
-alias ll='ls -lF'                             # omit hidden files from listing
+alias l='ls -alhF'                            # that's how I dooz it larry
+alias ll='ls -lhF'                             # omit hidden files from listing
 alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
 alias duh="sudo du -h -d 1"                   # don't need to know everything
 alias srch="grep -rlE"                        # text search
