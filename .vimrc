@@ -203,8 +203,9 @@ set ssop-=blank,buffers   " don't save blank windows or unopen buffers
 
 " ---------------------------------------------------------------------
 
-" Don't use Ex mode, use Q for formatting
-map Q gq
+" Avoid ending up in Ex mode
+nnoremap Q <nop>
+nnoremap q: <nop>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
