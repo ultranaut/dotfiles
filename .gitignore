@@ -1,2 +1,4 @@
 # Contains machine-specific settings, auth tokens, etc. 
 .zshenv
+
+Brewfile.lock.json
