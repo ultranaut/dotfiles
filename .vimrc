@@ -25,6 +25,10 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
+" This must be first, because it changes other options as a side effect.
+set nocompatible                  " disable vi-compatibility
+
+
 " --- UI chrome -------------------------------------------------------
 set cursorline                    " highlight line cursor is on
 set laststatus=2                  " always display status line
@@ -58,7 +62,6 @@ set encoding=utf-8                " show unicode glyphs
 set hidden                        " hide buffer on opening new file
 set history=1000                  " lots of history
 set nobackup                      " turn off auto-backup
-set nocompatible                  " disable vi-compatibility
 set switchbuf+=usetab,newtab
 set undolevels=1000               " lots of undo
 set wildignore+=*.swp             " files to ignore in wildmenu, etc
