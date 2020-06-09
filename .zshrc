@@ -41,7 +41,6 @@ alias gba='git branch -avv'
 alias gbd='git branch -d'
 alias gc!='git commit -v --amend'
 alias gc='git commit -v'
-alias gc='git commit -v'
 alias gcb='git checkout -b'
 alias gcf='git config --list'
 alias gcm='git checkout master'
@@ -54,6 +53,7 @@ alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Cr
 alias gll="git log --stat --abbrev-commit --date=format:'%a %b %d %Y %T'"
 alias glo="git log --graph --pretty='%Cred%h%Creset %C(auto)%d%Creset %s %Cgreen(%ad)' --date=short"
 alias gm='git merge'
+alias gmo='git merge origin/master'
 alias gp='git push'
 alias gr='git remote'
 alias grb='git rebase'
