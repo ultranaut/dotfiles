@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh                    # path to the oh-my-zsh config
 ZSH_CUSTOM=$HOME/.custom/oh-my-zsh      # path to custom config files
 ZSH_THEME="ultranoster"                 # theme to load.
 DISABLE_AUTO_UPDATE="true"              # disable auto-update checks
-plugins=(osx history-substring-search)  # plugins in ~/.oh-my-zsh/plugins/*
+plugins=(history-substring-search)  # plugins in ~/.oh-my-zsh/plugins/*
 CASE_SENSITIVE="true"                   # use case-sensitive completion
 ZSH_DISABLE_COMPFIX=true                # https://github.com/robbyrussell/oh-my-zsh/issues/6835#issuecomment-390216875
 source $ZSH/oh-my-zsh.sh                # what it says
