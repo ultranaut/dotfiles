@@ -145,7 +145,7 @@ nnoremap <leader>t :vertical below terminal<cr>
 nnoremap <leader><space> :noh<cr>
 
 " search directory recursively for word under cursor
-map <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
+noremap <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
 " search and replace visual selection
 vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
 
@@ -165,23 +165,23 @@ nnoremap <leader>c :%y+<CR>
 inoremap <leader>c <C-o>:%y+<CR>
 
 " vertically center the current cursor location
-nmap <space> zz
+nnoremap <space> zz
 
 " vertically center the next/previous search result
-nmap n nzz
-nmap N Nzz
+nnoremap n nzz
+nnoremap N Nzz
 
 " Act in haste, repent at leisure
 cmap w!! w !sudo tee % >/dev/null
 
 " Shortcut to toggle `set list`
-nmap <leader>l :set list!<CR>
+nnoremap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,nbsp:%,eol:¬
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 
 " `sort` visual selection
@@ -202,7 +202,7 @@ vnoremap <leader>r :sort<cr>'>
 
 " --- sessions --------------------------------------------------------
 " create a 'workspace' -- :mksession to create, <F3> to restore
-nmap <F3> <ESC>:call LoadSession()<CR>
+nnoremap <F3> <ESC>:call LoadSession()<CR>
 let s:sessionloaded = 0
 function LoadSession()
   source Session.vim
@@ -408,5 +408,5 @@ let g:ale_linters = {
 \}
 
 " better navigation between errors
-nmap <silent> [v :ALEPreviousWrap<cr>
-nmap <silent> ]v :ALENextWrap<cr>
+nnoremap <silent> [v :ALEPreviousWrap<cr>
+nnoremap <silent> ]v :ALENextWrap<cr>
