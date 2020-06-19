@@ -14,7 +14,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -22,6 +21,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 
@@ -241,18 +241,6 @@ if &t_Co > 2 || has("gui_running")
   syntax on
 endif
 
-if &t_Co >= 256 || has("gui_running")
-  " solarized options
-  set background=dark
-  let g:solarized_contrast="high"
-  colorscheme solarized
-endif
-
-" use solarized dark Airline theme
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-let g:airline#extensions#tabline#enabled = 1
-
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
@@ -408,3 +396,12 @@ let g:ale_linters = {
 " better navigation between errors
 nnoremap <silent> [v :ALEPreviousWrap<cr>
 nnoremap <silent> ]v :ALENextWrap<cr>
+
+
+" --- gruvbox ---------------------------------------------------------
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+
+
+" --- Airline ---------------------------------------------------------
+let g:airline#extensions#tabline#enabled = 1
