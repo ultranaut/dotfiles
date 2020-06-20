@@ -89,7 +89,7 @@ prompt_vim() {
   local vim=`env | grep VIMRUNTIME`
 
   if [[ ! -z $vim ]]; then
-    prompt_segment red white "{vim}"
+    prompt_segment red ${EGGSHELL} "{vim}"
   fi
 }
 
