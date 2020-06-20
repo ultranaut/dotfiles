@@ -31,8 +31,8 @@ function battery_charge {
 
 ### Some custom colors
 CHERRY=52
-GREENER=34
-OFFWHITE=224
+GREENER=142
+EGGSHELL=223
 CHARCOAL=234
 
 
@@ -119,7 +119,7 @@ function prompt_online() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment ${CHERRY} ${OFFWHITE} '%~'
+  prompt_segment ${CHERRY} ${EGGSHELL} '%~'
 }
 
 # Status:
