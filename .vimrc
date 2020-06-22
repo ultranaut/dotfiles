@@ -138,6 +138,13 @@ vnoremap <tab> %
 nnoremap <c-e> 3<c-e>
 nnoremap <c-y> 3<c-y>
 
+
+" --- text manipulation -----------------------------------------------
+" move a line up or down
+nnoremap _ kddpk
+nnoremap - ddp
+
+
 " --- terminal --------------------------------------------------------
 nnoremap <leader>t :vertical below terminal<cr>
 
