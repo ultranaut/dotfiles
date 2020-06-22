@@ -50,6 +50,7 @@ alias gf='git fetch'
 alias gfc='gll -i --grep'
 alias ghh='git help'
 alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
+alias glg="git log --all --name-status -i --grep"
 alias gll="git log --stat --abbrev-commit --date=format:'%a %b %d %Y %T'"
 alias glo="git log --graph --pretty='%Cred%h%Creset %C(auto)%d%Creset %s %Cgreen(%ad)' --date=short"
 alias gm='git merge'
