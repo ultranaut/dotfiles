@@ -82,17 +82,6 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export PATH="/usr/local/sbin:$PATH"
 
 
-#--- command line syntax highlighting, sort of ------------------------
-# this has to come first, apparently, at least for the pattern to work
-source $HOME/.custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# enable non-default hightlighters
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-
-# highlight `rm -rf` in red:
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
-
-
 #--- zsh-autosuggestions ----------------------------------------------
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^@' autosuggest-accept         # ctrl-space to accept suggestion
