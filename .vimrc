@@ -8,6 +8,7 @@
 "   http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 "   http://stackoverflow.com/q/96044/452233
 
+
 " --- vim-plug --------------------------------------------------------
 call plug#begin()
 Plug 'jiangmiao/auto-pairs'
@@ -49,10 +50,25 @@ set noerrorbells                  " no bell on errors
 set visualbell                    " disable non-error beeping
 set t_vb=                         " disable screen flash
 
+" Shortcut to toggle `set list`
+nnoremap <leader>l :set list!<CR>
 
-" --- Folding ---------------------------------------------------------
-set foldcolumn=4                  " foldcolumn width
-set foldmethod=manual             " set fold method
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,nbsp:%,eol:¬
+
+" visual indicator at column 72
+if exists('+colorcolumn')
+  set colorcolumn=72,80
+endif
+
+" highlight trailing whitespace except when typing in insert mode
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 
 " --- Editor behavior -------------------------------------------------
@@ -73,9 +89,52 @@ set wildignore+=*.ico
 set wildmode+=list:full           " list all matches and complete the first
 set wildmode+=full                " complete next full match
 
-" disable modeline
-set nomodeline
-set modelines=0
+set nomodeline                    " disable modeline
+set modelines=0                   " same
+
+" change the mapleader from \ to ,
+let mapleader=","
+
+" quick escape in insert mode, keep cursor in same spot
+inoremap jk <Esc>l
+
+" quick save
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <esc>:w<cr>li
+
+" quick exit
+nnoremap <leader>x :x<cr>
+inoremap <leader>x <esc>:x<cr>
+
+" yank entire buffer
+nnoremap <leader>c :%y+<CR>
+inoremap <leader>c <C-o>:%y+<CR>
+
+" vertically center the current cursor location
+nnoremap <space> zz
+
+" Act in haste, repent at leisure
+cmap w!! w !sudo tee % >/dev/null
+
+" Quickly edit/reload the vimrc file
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" `sort` visual selection
+vnoremap <leader>r :sort<cr>'>
+
+" Avoid ending up in Ex mode
+nnoremap Q <nop>
+nnoremap q: <nop>
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+inoremap <C-U> <C-G>u<C-U>
+
+
+" --- Folding ---------------------------------------------------------
+set foldcolumn=4                  " foldcolumn width
+set foldmethod=manual             " set fold method
 
 
 " --- Search ----------------------------------------------------------
@@ -83,6 +142,20 @@ set hlsearch           " highlight search terms
 set ignorecase         " ignore case when searching (but see smartcase)
 set incsearch          " show search matches as you type
 set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
+
+" toggle search highlighting
+nnoremap <leader><space> :set hlsearch!<cr>
+
+" search directory recursively for word under cursor
+noremap <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
+
+" search and replace visual selection
+vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
+
+" vertically center the next/previous search result
+nnoremap n nzz
+nnoremap N Nzz
+
 
 " --- Whitespace & indentation ----------------------------------------
 set autoindent         " copy indent from current line when starting a new line
@@ -95,25 +168,17 @@ set smarttab           " insert tabs on the start of a line according to shiftwi
 set shiftround         " use multiple of shiftwidth when indenting with '<' and '>'
 
 
-" change the mapleader from \ to ,
-let mapleader=","
-
-" retain visual selection when block indenting
-vnoremap > >gv
-vnoremap < <gv
-
-" quick escape in insert mode, keep cursor in same spot
-inoremap jk <Esc>l
-
-" --- split windows ---------------------------------------------------
-" move cursor between windows
+" --- splits ----------------------------------------------------------
+" move cursor between splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
 " switch horizontal split to vertical and vice versa
 nnoremap <leader>v <C-w>t<C-w>H
 nnoremap <leader>h <C-w>t<C-w>K
+
 
 " --- cursor behaviors ------------------------------------------------
 " disable arrow keys
@@ -144,67 +209,13 @@ nnoremap <c-y> 3<c-y>
 nnoremap _ kddpk
 nnoremap - ddp
 
+" retain visual selection when block indenting
+vnoremap > >gv
+vnoremap < <gv
+
 
 " --- terminal --------------------------------------------------------
 nnoremap <leader>t :vertical below terminal<cr>
-
-" --- search settings -------------------------------------------------
-nnoremap <leader><space> :noh<cr>
-
-" search directory recursively for word under cursor
-noremap <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
-" search and replace visual selection
-vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
-
-" quick save
-nnoremap <F2> :w<cr>
-inoremap <F2> <C-o>:w<cr>
-
-" quicker save
-nnoremap <leader>ss :w<cr>
-inoremap <leader>ss <esc>:w<cr>li
-"quick exit
-nnoremap <leader>x :x<cr>
-inoremap <leader>x <esc>:x<cr>
-
-" yank entire buffer
-nnoremap <leader>c :%y+<CR>
-inoremap <leader>c <C-o>:%y+<CR>
-
-" vertically center the current cursor location
-nnoremap <space> zz
-
-" vertically center the next/previous search result
-nnoremap n nzz
-nnoremap N Nzz
-
-" Act in haste, repent at leisure
-cmap w!! w !sudo tee % >/dev/null
-
-" Shortcut to toggle `set list`
-nnoremap <leader>l :set list!<CR>
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,nbsp:%,eol:¬
-
-" Quickly edit/reload the vimrc file
-nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
-
-
-" `sort` visual selection
-vnoremap <leader>r :sort<cr>'>
-
-" --- views -----------------------------------------------------------
-" load and create automatically
-" https://vi.stackexchange.com/a/13874/29528
-" augroup AutoSaveFolds
-"   autocmd!
-"   " view files are about 500 bytes
-"   " bufleave but not bufwinleave captures closing 2nd tab
-"   " nested is needed by bufwrite* (if triggered via other autocmd)
-"   autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
-"   autocmd BufWinEnter ?* silent! loadview
-" augroup end
 
 
 " --- sessions --------------------------------------------------------
@@ -230,14 +241,6 @@ set ssop-=options         " don't save options and mappings
 
 " ---------------------------------------------------------------------
 
-" Avoid ending up in Ex mode
-nnoremap Q <nop>
-nnoremap q: <nop>
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
@@ -255,21 +258,6 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
       \ | wincmd p | diffthis
 endif
-
-" visual indicator at column 72
-if exists('+colorcolumn')
-  set colorcolumn=72,80
-endif
-
-" highlight trailing whitespace except when typing in insert mode
-" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
 
 " http://vim.wikia.com/wiki/Remove_unwanted_spaces
 :nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
