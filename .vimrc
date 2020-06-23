@@ -366,10 +366,6 @@ nnoremap <leader>gc  :G commit<CR>
 nnoremap <leader>gp  :G push<CR>
 
 
-" --- Ack -------------------------------------------------------------
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-
 " --- Commentary ------------------------------------------------------
 " set nginx comment string
 autocmd FileType nginx setl cms=#\ %s
