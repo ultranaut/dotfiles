@@ -94,6 +94,7 @@ set modelines=0                   " same
 
 " change the mapleader from \ to ,
 let mapleader=","
+let maplocalleader="\\""
 
 " quick escape in insert mode, keep cursor in same spot
 inoremap jk <Esc>l
