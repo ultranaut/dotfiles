@@ -139,18 +139,18 @@ set foldmethod=manual             " set fold method
 
 " --- Search ----------------------------------------------------------
 set hlsearch           " highlight search terms
-set ignorecase         " ignore case when searching (but see smartcase)
 set incsearch          " show search matches as you type
-set smartcase          " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set ignorecase         " ignore case when searching (but see smartcase)
+set smartcase          " ignore case only if search pattern is all lowercase
 
 " toggle search highlighting
 nnoremap <leader><space> :set hlsearch!<cr>
 
-" search directory recursively for word under cursor
-noremap <F4> :execute "vimgrep /" .expand("<cword>") . "/j **" <Bar> cw<CR>
+" search and replace word under cursor
+nnoremap <leader>fr :%s/<c-r><c-w>//c<left><left>
 
 " search and replace visual selection
-vnoremap <C-r> "hy:%s/<C-r>h//c<left><left>
+vnoremap <leader>fr "hy:%s/<C-r>h//c<left><left>
 
 " vertically center the next/previous search result
 nnoremap n nzz
