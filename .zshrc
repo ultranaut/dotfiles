@@ -19,12 +19,14 @@ alias flushdns='sudo dscacheutil -flushcache' # clear the dns cache on Mac OS
 
 # if `exa` is installed, use it in place of `ls`
 if command -v exa &>/dev/null; then
-  alias ls='exa'
-  alias l='exa -aalF'
-  alias ll='exa -lF'
+  alias ls='exa'                              # barebones
+  alias l='exa -aalF'                         # show everything
+  alias ll='exa -lF'                          # exclude hidden files, `.` and `..` dirs
+  alias lt='exa -aalF -s new'                 # sort by modified time
 else
-  alias l='ls -alhF'
+  alias l='ls -alhF'                          # same as above, basically
   alias ll='ls -lhF'
+  alias lt='ls -alhFt'
 fi
 
 alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
