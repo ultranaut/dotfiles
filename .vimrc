@@ -375,15 +375,8 @@ inoremap <leader>fg <esc>:GFiles<CR>
 
 
 " --- ALE -------------------------------------------------------------
-" customize the error message format
-" let g:ale_echo_msg_error_str = 'E'
-" let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-" specify specific linter(s) to use for filetype
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
+" Only run linters named in ale_linters settings (in ftplugin files)
+let g:ale_linters_explicit = 1
 
 " better navigation between errors
 nnoremap <silent> [v :ALEPreviousWrap<cr>
