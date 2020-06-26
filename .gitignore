@@ -1,4 +1,12 @@
-# Contains machine-specific settings, auth tokens, etc. 
+# --- zsh -------------------------------------------------------------
+# Contains machine-specific settings
 .zshenv
 
+# --- Vim-plug --------------------------------------------------------
+# plugins directory
+.vim/plugged/
+# created on upgrades
+plug.vim.old
+
+# --- Homebrew --------------------------------------------------------
 Brewfile.lock.json
