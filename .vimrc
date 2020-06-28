@@ -9,6 +9,15 @@
 "   http://stackoverflow.com/q/96044/452233
 
 
+" --- first things first ----------------------------------------------
+" This must be first, because it changes other options as a side effect.
+set nocompatible                  " disable vi-compatibility
+
+" needs to be reset before any mappings that use it
+let mapleader=","
+let maplocalleader="\\"
+
+
 " --- vim-plug --------------------------------------------------------
 call plug#begin()
 Plug 'jiangmiao/auto-pairs'
@@ -26,8 +35,62 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 
-" This must be first, because it changes other options as a side effect.
-set nocompatible                  " disable vi-compatibility
+" --- Editor behavior -------------------------------------------------
+set backspace=indent,eol,start    " unrestricted backspacing in insert mode
+set clipboard=unnamed             " use the * register for yank, delete, etc.
+set encoding=utf-8                " show unicode glyphs
+set hidden                        " hide buffer on opening new file
+set history=1000                  " lots of history
+set nobackup                      " turn off auto-backup
+set switchbuf+=usetab,newtab
+set undolevels=1000               " lots of undo
+set wildignore+=*.swp             " files to ignore in wildmenu, etc
+set wildignore+=*.bak
+set wildignore+=*.jpg
+set wildignore+=*.gif
+set wildignore+=*.png
+set wildignore+=*.ico
+set wildmode+=list:full           " list all matches and complete the first
+set wildmode+=full                " complete next full match
+
+set nomodeline                    " disable modeline
+set modelines=0                   " same
+
+" quick escape in insert mode, keep cursor in same spot
+inoremap jk <Esc>l
+
+" quick save
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <esc>:w<cr>li
+
+" quick exit
+nnoremap <leader>x :x<cr>
+inoremap <leader>x <esc>:x<cr>
+
+" yank entire buffer
+nnoremap <leader>c :%y+<CR>
+inoremap <leader>c <C-o>:%y+<CR>
+
+" vertically center the current cursor location
+nnoremap <space> zz
+
+" Act in haste, repent at leisure
+cmap w!! w !sudo tee % >/dev/null
+
+" Quickly edit/reload the vimrc file
+nnoremap <silent> <leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
+
+" `sort` visual selection
+vnoremap <leader>r :sort<cr>'>
+
+" Avoid ending up in Ex mode
+nnoremap Q <nop>
+nnoremap q: <nop>
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+inoremap <C-U> <C-G>u<C-U>
 
 
 " --- UI chrome -------------------------------------------------------
@@ -69,68 +132,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
-
-" --- Editor behavior -------------------------------------------------
-set backspace=indent,eol,start    " unrestricted backspacing in insert mode
-set clipboard=unnamed             " use the * register for yank, delete, etc.
-set encoding=utf-8                " show unicode glyphs
-set hidden                        " hide buffer on opening new file
-set history=1000                  " lots of history
-set nobackup                      " turn off auto-backup
-set switchbuf+=usetab,newtab
-set undolevels=1000               " lots of undo
-set wildignore+=*.swp             " files to ignore in wildmenu, etc
-set wildignore+=*.bak
-set wildignore+=*.jpg
-set wildignore+=*.gif
-set wildignore+=*.png
-set wildignore+=*.ico
-set wildmode+=list:full           " list all matches and complete the first
-set wildmode+=full                " complete next full match
-
-set nomodeline                    " disable modeline
-set modelines=0                   " same
-
-" change the mapleader from \ to ,
-let mapleader=","
-let maplocalleader="\\"
-
-" quick escape in insert mode, keep cursor in same spot
-inoremap jk <Esc>l
-
-" quick save
-nnoremap <leader>s :w<cr>
-inoremap <leader>s <esc>:w<cr>li
-
-" quick exit
-nnoremap <leader>x :x<cr>
-inoremap <leader>x <esc>:x<cr>
-
-" yank entire buffer
-nnoremap <leader>c :%y+<CR>
-inoremap <leader>c <C-o>:%y+<CR>
-
-" vertically center the current cursor location
-nnoremap <space> zz
-
-" Act in haste, repent at leisure
-cmap w!! w !sudo tee % >/dev/null
-
-" Quickly edit/reload the vimrc file
-nnoremap <silent> <leader>ev :vsplit $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
-
-" `sort` visual selection
-vnoremap <leader>r :sort<cr>'>
-
-" Avoid ending up in Ex mode
-nnoremap Q <nop>
-nnoremap q: <nop>
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
 
 
 " --- Folding ---------------------------------------------------------
@@ -334,9 +335,7 @@ function GetGooglePythonIndent(lnum)
 endfunction
 
 
-" --- plugins ---------------------------------------------------------
-
-" netrw settings to make it more nerdtree-ish
+" --- netrw -----------------------------------------------------------
 let g:netrw_liststyle=3     " Use tree-mode as default view
 let g:netrw_preview=1       " preview window shown in vertical split
 let g:netrw_browse_split=3  " Open file in previous buffer
