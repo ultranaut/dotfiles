@@ -799,7 +799,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads/Fira_Code_v5.2</string>
+	<string>~</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -848,9 +848,9 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>320 335 799 448 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>410 377 620 392 0 0 1440 877 </string>
+	<string>370 204 700 622 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 417 650 452 0 0 1440 877 </string>
+	<string>0 77 1440 800 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 417 570 452 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1577,7 +1577,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -1590,16 +1590,18 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.10</string>
-		<string>3.3.7beta4</string>
-		<string>3.3.10beta3</string>
-		<string>3.3.8beta1</string>
 		<string>3.3.11beta1</string>
-		<string>3.3.10beta2</string>
-		<string>3.3.5beta3</string>
 		<string>3.3.10beta4</string>
-		<string>3.3.10beta1</string>
+		<string>3.3.8beta1</string>
+		<string>3.3.10beta3</string>
 		<string>3.3.4</string>
+		<string>3.3.5beta3</string>
+		<string>3.3.10</string>
+		<string>3.3.10beta1</string>
+		<string>3.3.7beta4</string>
+		<string>3.3.10beta2</string>
+		<string>3.3.12beta1</string>
+		<string>3.3.12beta2</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -1620,7 +1622,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>613258959.83899701</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>69</integer>
+	<integer>79</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2385,7 +2387,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/jshearer/Downloads/Fira_Code_v5.2</string>
+	<string>/Users/jshearer/.custom/iterm</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -2399,11 +2401,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-18T20:24:19Z</date>
+	<date>2020-06-27T22:10:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>195792700</integer>
+	<integer>2981138255</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SoundForEsc</key>
@@ -2413,7 +2415,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.11beta1</string>
+	<string>3.3.12beta2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
