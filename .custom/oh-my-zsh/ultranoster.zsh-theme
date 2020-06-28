@@ -5,25 +5,6 @@
 #   agnoster's Theme - https://gist.github.com/3712874
 #   A Powerline-inspired theme for ZSH
 #
-#   # README
-#
-#   In order for this theme to render correctly, you will need a
-#   [Powerline-patched font](https://gist.github.com/1595572).
-#
-#   In addition, I recommend the
-#   [Solarized theme](https://github.com/altercation/solarized/) and, if you're
-#   using it on Mac OS X, [iTerm 2](http://www.iterm2.com/) over Terminal.app -
-#   it has significantly better color fidelity.
-#
-#   # Goals
-#
-#   The aim of this theme is to only show you *relevant* information. Like most
-#   prompts, it will only show git information when in a git working directory.
-#   However, it goes a step further: everything from the current user and
-#   hostname to whether the last call exited with an error to whether background
-#   jobs are running in this shell will all be displayed automatically when
-#   appropriate.
-
 
 function battery_charge {
     echo `~/bin/batcharge.py` 2>/dev/null
@@ -37,13 +18,10 @@ CHARCOAL=234
 
 
 ### Segment drawing
-# A few utility functions to make it easy and re-usable to draw segmented prompts
-
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR='⮀'     # U+25B6
 
-ONLINE='%{%F{green}%}◉'   # U+25C9
-OFFLINE='%{%F{red}%}◉'
+# A few utility functions to make it easy and re-usable to draw segmented prompts
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -106,14 +84,6 @@ prompt_git() {
       prompt_segment ${GREENER} ${CHARCOAL}
     fi
     echo -n "${ref/refs\/heads\//⭠ }$dirty"
-  fi
-}
-
-function prompt_online() {
-  if [[ -f ~/.offline ]]; then
-    echo $OFFLINE
-  else
-    echo $ONLINE
   fi
 }
 
