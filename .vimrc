@@ -71,9 +71,6 @@ inoremap <leader>x <esc>:x<cr>
 nnoremap <leader>c :%y+<CR>
 inoremap <leader>c <C-o>:%y+<CR>
 
-" vertically center the current cursor location
-nnoremap <space> zz
-
 " Act in haste, repent at leisure
 cmap w!! w !sudo tee % >/dev/null
 
@@ -182,6 +179,16 @@ nnoremap <leader>v <C-w>t<C-w>H
 nnoremap <leader>h <C-w>t<C-w>K
 
 
+" --- buffers ---------------------------------------------------------
+" navigate previous/next
+nnoremap <space>h :bp<cr>
+nnoremap <space>l :bn<cr>
+" list buffers
+nnoremap <space>s :ls<cr>
+" close current buffer
+nnoremap <space>d :bd<cr>
+
+
 " --- cursor behaviors ------------------------------------------------
 " disable arrow keys
 nnoremap <up>    <nop>
@@ -238,7 +245,6 @@ autocmd VimLeave * call SaveSession()
 " .mksession options
 set ssop+=globals         " save global variables
 set ssop-=blank           " don't save empty windows
-set ssop-=buffers         " don't save unloaded buffers
 set ssop-=options         " don't save options and mappings
 
 " ---------------------------------------------------------------------
