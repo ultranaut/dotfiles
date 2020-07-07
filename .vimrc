@@ -358,11 +358,13 @@ nnoremap <silent> ]v :ALENextWrap<cr>
 
 
 " --- gruvbox ---------------------------------------------------------
+" disable weird selection highlighting
+let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
-let g:airline_theme='gruvbox'
 
 
 " --- Airline ---------------------------------------------------------
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
