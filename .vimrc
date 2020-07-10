@@ -110,6 +110,10 @@ set noerrorbells                  " no bell on errors
 set visualbell                    " disable non-error beeping
 set t_vb=                         " disable screen flash
 
+if has('termguicolors')
+  set termguicolors               " enable 24-bit color
+endif
+
 " Shortcut to toggle `set list`
 nnoremap <leader>l :set list!<CR>
 
