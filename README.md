@@ -17,6 +17,14 @@ Change login shell to zsh:
 
 and enter password when prompted.
 
+[Enable italics][1] in shell and Vim:
+
+    cd ~/.dotfiles
+    tic xterm-256color-italic.terminfo
+
+and tell iTerm to use this `TERM` in Preferences > Profile > Terminal > Report Terminal Type
+
+
 ## Updating/upgrading submodules
 
 To create a submodule:
@@ -38,3 +46,7 @@ To upgrade all submodules:
 
     cd ~/.dotfiles
     git submodule foreach git pull origin master
+
+
+
+[1]: https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/ "Italic fonts in iTerm2, tmux, and vim"
