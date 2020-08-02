@@ -2,8 +2,6 @@
 
 import subprocess, inspect, os
 
-# TODO: run `rake make` in command-t bundle
-
 # these files don't need to be symlimked
 dont_link = [
   "README.md",
@@ -13,6 +11,9 @@ dont_link = [
   ".DS_Store",
   "LICENSE.txt",
   "README.md",
+  "Brewfile",
+  "Brewfile.lock.json",
+  "Session.vim",
   "setup.py"
 ]
 
