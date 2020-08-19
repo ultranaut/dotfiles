@@ -1,5 +1,7 @@
 24-bit
 CSS
+DOM
+Dropdown
 EOL
 EOLs
 Emmet
@@ -8,6 +10,7 @@ Lifecycle
 Redux
 TextMate
 UI
+UltiSnips
 autocomplete
 dotfiles
 foldcolumn
@@ -17,6 +20,7 @@ glyphs
 gruvbox
 gui
 iTerm
+lifecycle
 linter
 linters
 mksession
