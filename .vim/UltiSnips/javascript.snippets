@@ -1,3 +1,48 @@
 snippet log "console.log()"
-console.log($1);
+console.log($1)
+endsnippet
+
+snippet exd "export default" b
+export default ${1:Component};
+endsnippet
+
+snippet arfunc "arrow function"
+($1) => { $2 }$0
+endsnippet
+
+# React
+# ---------------------------------------------------------------------
+snippet ir "import React" b
+import React from 'react';
+endsnippet
+
+snippet irc "import React, {Component}" b
+import React, {${1:Component}$2} from 'react';
+endsnippet
+
+snippet ird "import ReactDOM" b
+import ReactDOM from 'react-dom';
+endsnippet
+
+snippet ic "import component" b
+import ${1:Component} from './${2:components}/$1';
+endsnippet
+
+snippet rcc "React class component" b
+class ${1:Component} extends React.Component {
+	render() {
+		return (
+			$2
+		);
+	}
+}
+$0
+endsnippet
+
+snippet rfc "React functional component" b
+const ${1:Component} = (props) => {
+	return (
+		$2
+	);
+};
 endsnippet
