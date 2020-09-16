@@ -27,6 +27,7 @@ mksession
 modeline
 netrw
 nginx
+redux
 repo
 shiftwidth
 smartcase
