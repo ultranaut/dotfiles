@@ -29,6 +29,11 @@ else
   alias lt='ls -alhFt'
 fi
 
+# if `bat` is installed, use it in place of `cat`
+if command -v bat &>/dev/null; then
+  alias cat='bat'
+fi
+
 alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
 alias duh="sudo du -h -d 1"                   # don't need to know everything
 alias srch="grep -rlE"                        # text search
