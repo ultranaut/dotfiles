@@ -20,7 +20,7 @@ and enter password when prompted.
 [Enable italics][1] in shell and Vim:
 
     cd ~/.dotfiles
-    tic xterm-256color-italic.terminfo
+    tic .terminfo/xterm-256color-italic.terminfo
 
 and tell iTerm to use this `TERM` in Preferences > Profile > Terminal > Report Terminal Type
 
