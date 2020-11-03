@@ -1,4 +1,5 @@
 # dotfiles
+
 This is my dotfiles repo. There are many like it, but this one is mine.
 
 ## Installation
@@ -10,6 +11,8 @@ Clone the repository and run the setup script:
     ./setup.py
 
 `setup.py` creates symlinks and fetches and initializes the submodules.
+
+Create symlinks to `/etc` files in appropriate locations
 
 Change login shell to zsh:
 
@@ -23,7 +26,6 @@ and enter password when prompted.
     tic .terminfo/xterm-256color-italic.terminfo
 
 and tell iTerm to use this `TERM` in Preferences > Profile > Terminal > Report Terminal Type
-
 
 ## Updating/upgrading submodules
 
@@ -46,7 +48,5 @@ To upgrade all submodules:
 
     cd ~/.dotfiles
     git submodule foreach git pull origin master
-
-
 
 [1]: https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/ "Italic fonts in iTerm2, tmux, and vim"
