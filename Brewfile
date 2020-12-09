@@ -21,6 +21,7 @@ brew "jsonlint"
 brew "mysql", restart_service: true
 brew "neovim"
 brew "php"
+brew "php@7.4"
 brew "phpmyadmin"
 brew "prettier"
 brew "ripgrep"
