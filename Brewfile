@@ -20,6 +20,7 @@ brew "httpd", restart_service: true
 brew "jsonlint"
 brew "mysql", restart_service: true
 brew "neovim"
+brew "tidy-html5"
 brew "php"
 brew "php@7.4"
 brew "phpmyadmin"
