@@ -40,6 +40,8 @@ alias srch="grep -rlE"                        # text search
 alias ping='ping -c 4'                        # dos style
 alias npmls='npm ls --depth=0'                # I rarely need all the extra crap
 
+alias bbb='brew update && brew upgrade && brew cleanup && brew doctor'
+
 # git stuff
 alias g='git'
 alias ga='git add'
