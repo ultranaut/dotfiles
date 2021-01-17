@@ -14,6 +14,7 @@ brew "exa"
 brew "fd"
 brew "fzf"
 brew "git"
+brew "gnupg"
 brew "htop"
 brew "http-server"
 brew "httpd", restart_service: true
