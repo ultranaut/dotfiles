@@ -33,6 +33,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'SirVer/ultisnips'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 
