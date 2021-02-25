@@ -34,7 +34,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'SirVer/ultisnips'
 Plug 'junegunn/goyo.vim'
-Plug 'tomlion/vim-solidity'
 call plug#end()
 
 
