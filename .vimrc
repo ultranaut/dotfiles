@@ -136,6 +136,12 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Change cursor shape between insert and normal mode in iTerm2.app
+" https://hamberg.no/erlend/posts/2014-03-09-change-vim-cursor-in-iterm.html
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
 
 " --- Folding ---------------------------------------------------------
 set foldcolumn=4                  " foldcolumn width
