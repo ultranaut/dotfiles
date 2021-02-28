@@ -368,6 +368,10 @@ let g:ale_linters_explicit = 1
 nnoremap <silent> [v :ALEPreviousWrap<cr>
 nnoremap <silent> ]v :ALENextWrap<cr>
 
+" run ALEFix
+nnoremap <F2> :ALEFix<cr>
+inoremap <F2> <C-o>:ALEFix<cr>
+
 
 " --- gruvbox ---------------------------------------------------------
 " disable weird selection highlighting
