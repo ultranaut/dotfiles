@@ -9,8 +9,15 @@ ZSH_DISABLE_COMPFIX=true                # https://github.com/robbyrussell/oh-my-
 source $ZSH/oh-my-zsh.sh                # what it says
 
 
-#--- add our bin dir and cwd to the path --------------------------------------
+#--- add our bin dir and cwd to the path ------------------------------
 PATH=$PATH:~/bin:.
+
+#--- use nvim/vim to view man pages -----------------------------------
+if command -v nvim &>/dev/null; then
+  export MANPAGER="nvim +Man!"
+else
+  export MANPAGER="vim -M +MANPAGER -"
+fi
 
 
 #--- Aliases ----------------------------------------------------------
