@@ -400,11 +400,11 @@ let g:UltiSnipsExpandTrigger="<S-l>"
 
 " --- CoC -------------------------------------------------------------
 let g:coc_global_extensions = [
-      \ 'coc-tsserver', 
-      \ 'coc-html', 
+      \ 'coc-tsserver',
+      \ 'coc-html',
       \ 'coc-css',
-      \ 'coc-json', 
-      \ 'coc-git', 
+      \ 'coc-json',
+      \ 'coc-git',
       \ 'coc-jedi',
       \ 'coc-highlight',
       \ 'coc-snippets', ]
