@@ -389,9 +389,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 
+
 " --- UltiSnips -------------------------------------------------------
 " default setting of '<tab>' conflicts with CoC
-let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsExpandTrigger="<S-l>"
 
 
 " --- CoC -------------------------------------------------------------
