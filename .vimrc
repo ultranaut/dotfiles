@@ -130,15 +130,6 @@ if exists('+colorcolumn')
   set colorcolumn=72,80
 endif
 
-" highlight trailing whitespace except when typing in insert mode
-" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
 " Change cursor shape between insert and normal mode in iTerm2.app
 " https://hamberg.no/erlend/posts/2014-03-09-change-vim-cursor-in-iterm.html
 if $TERM_PROGRAM =~ "iTerm"
@@ -381,6 +372,18 @@ inoremap <F2> <C-o>:ALEFix<cr>
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+" highlight trailing whitespace except when typing in insert mode
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+"
+" Needs to follow colorscheme declaration because gruvbox runs
+" `:hi clear` command, nuking any custom highlighting set before it runs
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 
 " --- Airline ---------------------------------------------------------
