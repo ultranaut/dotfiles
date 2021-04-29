@@ -398,7 +398,7 @@ let g:airline_powerline_fonts = 1
 
 " --- UltiSnips -------------------------------------------------------
 " default setting of '<tab>' conflicts with CoC
-let g:UltiSnipsExpandTrigger="<S-l>"
+let g:UltiSnipsExpandTrigger="<C-l>"
 
 
 " --- CoC -------------------------------------------------------------
