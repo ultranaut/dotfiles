@@ -343,6 +343,9 @@ autocmd FileType nginx setl cms=#\ %s
 " --- Emmet -----------------------------------------------------------
 " redefine trigger key
 let g:user_emmet_leader_key=','
+" only load Emmet for html and css filetypes
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 
 " --- fzf -------------------------------------------------------------
