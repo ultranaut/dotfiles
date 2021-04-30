@@ -465,7 +465,7 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 " coc's default hightlight is too subtle, as in I can't see it
-highlight CocHighlightText ctermbg=241 guibg=#665c54
+highlight link CocHighlightText IncSearch
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
