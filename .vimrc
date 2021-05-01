@@ -345,7 +345,7 @@ autocmd FileType nginx setl cms=#\ %s
 let g:user_emmet_leader_key=','
 " only load Emmet for html and css filetypes
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript EmmetInstall
+autocmd FileType html,css,javascript,typescriptreact EmmetInstall
 
 
 " --- fzf -------------------------------------------------------------
