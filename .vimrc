@@ -392,7 +392,8 @@ autocmd BufWinLeave * call clearmatches()
 " --- Airline ---------------------------------------------------------
 let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'jsformatter'
 let g:airline_powerline_fonts = 1
 
 
