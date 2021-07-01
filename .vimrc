@@ -411,7 +411,8 @@ let g:coc_global_extensions = [
       \ 'coc-git',
       \ 'coc-jedi',
       \ 'coc-highlight',
-      \ 'coc-snippets', ]
+      \ 'coc-snippets',
+      \ 'coc-solargraph']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
