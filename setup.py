@@ -4,16 +4,17 @@ import subprocess, inspect, os
 
 # these files don't need to be symlimked
 dont_link = [
-  "README.md",
+  ".DS_Store",
   ".git",
   ".gitignore",
   ".gitmodules",
-  ".DS_Store",
-  "LICENSE.txt",
-  "README.md",
   "Brewfile",
   "Brewfile.lock.json",
+  "LICENSE.txt",
+  "README.md",
+  "README.md",
   "Session.vim",
+  "etc",
   "setup.py"
 ]
 
