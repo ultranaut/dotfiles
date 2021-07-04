@@ -21,70 +21,7 @@ fi
 
 
 #--- Aliases ----------------------------------------------------------
-# general stuff
-alias flushdns='sudo dscacheutil -flushcache' # clear the dns cache on Mac OS
-
-# if `exa` is installed, use it in place of `ls`
-if command -v exa &>/dev/null; then
-  alias ls='exa'                              # barebones
-  alias l='exa -aalF'                         # show everything
-  alias ll='exa -lF'                          # exclude hidden files, `.` and `..` dirs
-  alias lt='exa -aalF -s new'                 # sort by modified time
-else
-  alias l='ls -alhF'                          # same as above, basically
-  alias ll='ls -lhF'
-  alias lt='ls -alhFt'
-fi
-
-# if `bat` is installed, use it in place of `cat`
-if command -v bat &>/dev/null; then
-  alias cat='bat'
-fi
-
-# if `nvim` is installed, use it
-if command -v nvim &>/dev/null; then
-  alias vim='nvim'
-fi
-
-alias path="echo ${PATH} | tr ':' '\n'"       # friendlier path listing
-alias duh="sudo du -h -d 1"                   # don't need to know everything
-alias srch="grep -rlE"                        # text search
-alias ping='ping -c 4'                        # dos style
-alias npmls='npm ls --depth=0'                # I rarely need all the extra crap
-
-alias bbb='brew update && brew upgrade && brew cleanup && brew doctor'
-
-# git stuff
-alias g='git'
-alias ga='git add'
-alias gb='git branch -vv'
-alias gba='git branch -avv'
-alias gbd='git branch -d'
-alias gc!='git commit -v --amend'
-alias gc='git commit -v'
-alias gcb='git checkout -b'
-alias gcf='git config --list'
-alias gcm='git checkout master'
-alias gco='git checkout'
-alias gd="git diff --color-words"
-alias gf='git fetch'
-alias gfc='gll -i --grep'
-alias ghh='git help'
-alias gl="git --no-pager  log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %ar%Creset' -20"
-alias glg="git log --all --name-status -i --grep"
-alias gll="git log --stat --abbrev-commit --date=format:'%a %b %d %Y %T'"
-alias glo="git log --graph --pretty='%Cred%h%Creset %C(auto)%d%Creset %s %Cgreen(%ad)' --date=short"
-alias gm='git merge'
-alias gmo='git merge origin/master'
-alias gp='git push'
-alias gr='git remote'
-alias grb='git rebase'
-alias grm='git rm'
-alias grs='git restore'
-alias grt='cd "$(git rev-parse --show-toplevel || echo .)"'
-alias grv='git remote -v'
-alias gst='git status'
-alias gsw='git switch'
+[ -f ~/.aliases ] && source ~/.aliases
 
 
 #--- npm --------------------------------------------------------------
