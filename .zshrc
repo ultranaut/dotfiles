@@ -8,9 +8,24 @@ CASE_SENSITIVE="true"                   # use case-sensitive completion
 ZSH_DISABLE_COMPFIX=true                # https://github.com/robbyrussell/oh-my-zsh/issues/6835#issuecomment-390216875
 source $ZSH/oh-my-zsh.sh                # what it says
 
+#--- my .zsh configuration --------------------------------------------
+DOTZSH=$HOME/.zsh
+
+#--- Aliases ----------------------------------------------------------
+if [ -d $DOTZSH/aliases ]; then
+  for file in $DOTZSH/aliases/*; do
+    source "$file"
+  done
+fi
+
+#--- Functions --------------------------------------------------------
+if [ -d $DOTZSH/functions ]; then
+  fpath+=$DOTZSH/functions
+  autoload -U $DOTZSH/functions/*
+fi
 
 #--- add our bin dir and cwd to the path ------------------------------
-PATH=$PATH:~/bin:.
+PATH=$PATH:$HOME/bin:.
 
 #--- use nvim/vim to view man pages -----------------------------------
 if command -v nvim &>/dev/null; then
@@ -18,11 +33,6 @@ if command -v nvim &>/dev/null; then
 else
   export MANPAGER="vim -M +MANPAGER -"
 fi
-
-
-#--- Aliases ----------------------------------------------------------
-[ -f ~/.aliases ] && source ~/.aliases
-
 
 #--- npm --------------------------------------------------------------
 # github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
