@@ -228,6 +228,10 @@ nnoremap - ddp
 vnoremap > >gv
 vnoremap < <gv
 
+" select most recently yanked or changed text
+" e.g., select recently pasted text
+nnoremap gp `[v`]
+
 
 " --- terminal --------------------------------------------------------
 nnoremap <leader>t :vertical below terminal<cr>
