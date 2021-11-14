@@ -143,3 +143,14 @@ export NVM_DIR="$HOME/.nvm"
 # the following to ~/.zshrc:
 
 eval "$(rbenv init -)"
+
+
+# --- pip -------------------------------------------------------------
+# pip should only run if there is a virtualenv currently activated
+# to avoid inadvertently installing global packages
+export PIP_REQUIRE_VIRTUALENV=true
+
+# workaround virtualenv requirement to install global packages
+gpip() {
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
