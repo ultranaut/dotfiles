@@ -1,5 +1,3 @@
-setlocal foldmethod=syntax
-
 " --- ALE -------------------------------------------------------------
 let b:ale_linters = ['eslint', 'tsserver']
 let b:ale_echo_msg_format = '[%linter%] %code%: %s [%severity%]'

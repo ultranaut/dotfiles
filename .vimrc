@@ -139,7 +139,7 @@ endif
 
 " --- Folding ---------------------------------------------------------
 set foldcolumn=4                  " foldcolumn width
-set foldmethod=manual             " set fold method
+set foldmethod=indent             " set fold method
 
 
 " --- Search ----------------------------------------------------------
