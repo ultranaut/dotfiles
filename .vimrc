@@ -174,6 +174,10 @@ set shiftround         " use multiple of shiftwidth when indenting with '<' and 
 
 
 " --- splits ----------------------------------------------------------
+" :[v]split default behavior
+set splitright         " open new vertical splits to the right
+set splitbelow         " open new horizontal splits below
+
 " move cursor between splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
