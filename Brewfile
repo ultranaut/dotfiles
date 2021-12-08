@@ -9,7 +9,7 @@ brew "autojump"
 brew "bat"
 brew "cmake"
 brew "tidy-html5"
-brew "php"
+brew "php", restart_service: true
 brew "composer"
 brew "node"
 brew "eslint"
@@ -25,7 +25,7 @@ brew "httpd", restart_service: true
 brew "jsonlint"
 brew "mysql", restart_service: true
 brew "neovim"
-brew "php@7.4"
+brew "php@7.4", restart_service: true
 brew "phpmyadmin"
 brew "prettier"
 brew "rbenv"
