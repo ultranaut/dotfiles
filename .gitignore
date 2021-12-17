@@ -16,3 +16,4 @@ Brewfile.lock.json
 
 # --- Tmux plugins ----------------------------------------------------
 .tmux/plugins/
+.tmux/resurrect/
