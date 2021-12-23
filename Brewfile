@@ -8,9 +8,6 @@ tap "mongodb/brew"
 brew "autojump"
 brew "bat"
 brew "cmake"
-brew "tidy-html5"
-brew "php", restart_service: true
-brew "composer"
 brew "node"
 brew "eslint"
 brew "exa"
@@ -25,6 +22,8 @@ brew "httpd", restart_service: true
 brew "jsonlint"
 brew "mysql", restart_service: true
 brew "neovim"
+brew "tidy-html5"
+brew "php", restart_service: true
 brew "php@7.4", restart_service: true
 brew "phpmyadmin"
 brew "prettier"
