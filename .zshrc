@@ -154,3 +154,8 @@ export PIP_REQUIRE_VIRTUALENV=true
 gpip() {
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+# --- pyenv -----------------------------------------------------------
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

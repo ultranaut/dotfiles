@@ -27,6 +27,7 @@ brew "php", restart_service: true
 brew "php@7.4", restart_service: true
 brew "phpmyadmin"
 brew "prettier"
+brew "pyenv"
 brew "rbenv"
 brew "ripgrep"
 brew "ruby"
