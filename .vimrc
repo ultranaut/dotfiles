@@ -93,6 +93,9 @@ nnoremap q: <nop>
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
+" Reformat text to wrap to 72 chars
+vnoremap gq <Esc>:let tw=&tw<CR>:set tw=72<CR>gvgq:let &tw=tw<CR>
+
 
 " --- UI chrome -------------------------------------------------------
 set cursorline                    " highlight line cursor is on
