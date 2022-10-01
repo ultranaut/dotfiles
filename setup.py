@@ -4,6 +4,7 @@ import subprocess, inspect, os
 
 # these files don't need to be symlimked
 dont_link = [
+  ".config",
   ".DS_Store",
   ".git",
   ".gitignore",
