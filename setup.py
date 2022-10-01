@@ -43,10 +43,10 @@ if __name__ == "__main__":
   dotfiles_root = os.path.dirname(os.path.abspath(rel_path))
   user_home = os.path.expanduser('~')
 
-  print "\nStarting..."
+  print("\nStarting...")
 
   # Create the symlinks.
-  print "\nCreating links..."
+  print("\nCreating links...")
   linked = make_symlinks()
 
   # fetch and initialize submodules
