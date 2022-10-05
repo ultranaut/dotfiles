@@ -150,12 +150,8 @@ eval "$(rbenv init -)"
 # to avoid inadvertently installing global packages
 export PIP_REQUIRE_VIRTUALENV=true
 
-# workaround virtualenv requirement to install global packages
-gpip() {
-  PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
 
 # --- pyenv -----------------------------------------------------------
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
