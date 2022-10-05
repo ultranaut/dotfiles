@@ -10,6 +10,7 @@ dont_link = [
   ".gitignore",
   ".gitmodules",
   ".macos",
+  ".terminfo"
   "Brewfile",
   "Brewfile.lock.json",
   "LICENSE.txt",
