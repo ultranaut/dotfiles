@@ -101,7 +101,6 @@ vnoremap gq <Esc>:let tw=&tw<CR>:set tw=72<CR>gvgq:let &tw=tw<CR>
 set cursorline                    " highlight line cursor is on
 set laststatus=2                  " always display status line
 set number                        " always show line numbers
-set relativenumber                " use hybrid line numbering
 set ruler                         " show the cursor position all the time
 set showmatch                     " set show matching parenthesis
 set showcmd                       " show current command at bottom of screen
